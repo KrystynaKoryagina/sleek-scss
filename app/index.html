@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Your profile</title>
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header id="header">
+        <div class="header-content d-flex align-items-center">
+            <form class="d-flex align-items-center">
+                <label for="search-input"><i class="fas fa-search"></i></label>
+                <input type="text" class="search-input" name="search-input" id="search-input" placeholder="Search...">
+            </form>
+            <div class="user-controls d-flex ml-auto">
+                <div class="dropdown-items-wrap d-flex align-items-center">
+                    <div class="dropdown-item">
+                        <div class="dropdown-controls d-flex">
+                            <i class="fas fa-envelope mx-auto my-auto"></i>
+                            <span class="notify-count bg-blue">4</span>
+                        </div>
+                        <!-- /.dropdown-controls -->
+                    </div>
+                    <!-- /.dropdown-item -->
+                    <div class="dropdown-item">
+                        <div class="dropdown-controls d-flex">
+                            <i class="fas fa-bell mx-auto my-auto"></i>
+                            <span class="notify-count bg-red">6</span>
+                        </div>
+                        <!-- /.dropdown-controls -->
+                    </div>
+                    <!-- /.dropdown-item -->
+                </div>
+                <!-- /.dropdown-items-wrap -->
+                <div class="user-dropdown-control">
+                    <img src="img/user-avatar.png" alt="">
+                </div>
+                <!-- /.user-dropdown-control -->
+            </div>
+            <!-- /.user-controls -->
+        </div>
+        <!-- /.header-content -->
+    </header>
+    <!-- /#header -->
+
+    <aside id="aside">
+        <div class="aside-head d-flex align-items-center">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="">
+                </a>
+            </div>
+            <!-- /.logo -->
+            <div class="menu-btn ml-auto">
+                <span style="width: 30px"></span>
+                <span style="width: 16px"></span>
+                <span style="width: 22px"></span>                
+            </div>
+            <!-- /.menu-btn -->
+        </div>
+        <!-- /.aside-head -->
+        <div class="menu-wrapper d-flex flex-column">
+            <h6 class="menu-title">Menu</h6>
+            <nav class="aside-nav">
+                <a href="#"><i class="fas fa-home"></i>Overview</a>
+                <a href="#"><i class="fas fa-chart-bar"></i>Analytics</a>
+                <a href="#" class="active"><i class="fas fa-user"></i>Your Profile</a>
+                <a href="#"><i class="fas fa-money-check"></i>Invoice</a>
+                <a href="#"><i class="fas fa-briefcase"></i>Marketplace</a>
+                <a href="#"><i class="fas fa-sitemap"></i>Projects</a>
+                <a href="#"><i class="fas fa-envelope"></i>Inbox</a>
+                <a href="#"><i class="far fa-life-ring"></i>Support</a>
+            </nav>
+            <!-- /.aside-nav -->
+            <a href="" class="settings-btn mt-auto mx-auto">
+                <i class="fas fa-cog"></i>
+            </a>
+            <!-- /.settings-btn -->
+        </div>
+        <!-- /.menu-wrapper -->
+    </aside>
+    <!-- /#aside -->
+
+    <main id="main">
+        <div class="page-header d-flex align-items-center bg-white">
+            <div class="page-header-info">
+                <h3 class="page-title">Your profile</h3>
+                <span class="page-subtitle">Home | Profile</span>
+            </div>
+            <!-- /.page-header-info -->
+            <div class="page-header-charts-wrap d-flex align-items-center ml-auto">
+                <div class="page-header-chart d-flex align-items-center">
+                    <div class="chart-info">
+                        <span class="chart-name">My income</span>
+                        <span class="total-chart-value"><i class="fas fa-dollar-sign"></i> 42, 457</span>
+                    </div>
+                    <!-- /.chart-info -->
+                    <div class="small-chart d-flex align-items-end red-hover">
+                        <div class="column" style="height: 16px">
+                            <span>100</span>
+                        </div>
+                        <div class="column" style="height: 12px">
+                            <span>96</span>
+                        </div>
+                        <div class="column" style="height: 8px">
+                            <span>92</span>
+                        </div>
+                        <div class="column" style="height: 10px">
+                            <span>94</span>
+                        </div>
+                        <div class="column" style="height: 32px">
+                            <span>472</span>
+                        </div>
+                        <div class="column" style="height: 16px">
+                            <span>100</span>
+                        </div>
+                        <div class="column" style="height: 22px">
+                            <span>150</span>
+                        </div>
+                        <div class="column" style="height: 28px">
+                            <span>145</span>
+                        </div>
+                        <div class="column" style="height: 38px">
+                            <span>480</span>
+                        </div>
+                        <div class="column" style="height: 19px">
+                            <span>110</span>
+                        </div>
+                    </div>
+                    <!-- /.small-chart -->
+                </div>
+                <!-- /.page-header-chart -->
+                <div class="page-header-chart d-flex align-items-center">
+                    <div class="chart-info">
+                        <span class="chart-name">Site traffic</span>
+                        <span class="total-chart-value"><i class="fas fa-sync-alt"></i> 42, 457</span>
+                    </div>
+                    <!-- /.chart-info -->
+                    <div class="small-chart d-flex align-items-end blue-hover">
+                        <div class="column" style="height: 16px">
+                            <span>100</span>
+                        </div>
+                        <div class="column" style="height: 12px">
+                            <span>96</span>
+                        </div>
+                        <div class="column" style="height: 8px">
+                            <span>92</span>
+                        </div>
+                        <div class="column" style="height: 10px">
+                            <span>94</span>
+                        </div>
+                        <div class="column" style="height: 32px">
+                            <span>324</span>
+                        </div>
+                        <div class="column" style="height: 16px">
+                            <span>100</span>
+                        </div>
+                        <div class="column" style="height: 22px">
+                            <span>150</span>
+                        </div>
+                        <div class="column" style="height: 28px">
+                            <span>145</span>
+                        </div>
+                        <div class="column" style="height: 38px">
+                            <span>480</span>
+                        </div>
+                        <div class="column" style="height: 19px">
+                            <span>110</span>
+                        </div>
+                    </div>
+                    <!-- /.small-chart -->
+                </div>
+                <!-- /.page-header-chart -->
+            </div>
+            <!-- /.page-header-charts-wrap -->
+        </div>
+        <!-- /.page-header -->
+    </main>
+    <!-- /#main -->
+</body>
+</html>

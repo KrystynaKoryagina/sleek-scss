@@ -1,0 +1,117 @@
+.page-header {
+    width: 100%;
+    height: 120px;
+    padding: 20px 40px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .04);
+
+    .page-header-info {
+        .page-title {
+            margin-bottom: 8px;
+            font-family: 'ralewaymedium', sans-serif;
+            font-size: 1.375rem;
+            color: #1d2025;
+        }
+
+        .page-subtitle {
+            font-size: .875rem;
+            color: #76797e;
+        }
+    }
+}
+
+.page-header-chart {
+    .chart-info {
+        margin-right: 20px;
+
+        span {
+            display: block;
+        }
+
+        .chart-name {
+            font-size: .75rem;
+            line-height: 1.66em;
+            text-transform: uppercase;
+        }
+
+        .total-chart-value {
+            font-family: 'ralewaymedium', sans-serif;
+            font-size: 1.125rem;
+            color: #1585ff;
+        }
+    }
+
+    .small-chart {
+        .column {
+            position: relative;
+            width: 4px;
+            background-color: $basicSmallChartBg;
+    
+            & + .column {
+                margin-left: 4px;
+            }
+
+            span {
+                @include position-x-center;
+                display: none;
+                top: -30px;
+                padding: 3px 6px;
+                font-family: 'ralewaymedium', sans-serif;
+                font-size: .8125rem;
+                color: #fff;
+                text-align: center;
+                border-radius: 2px;
+
+                &::before {
+                    @include position-x-center;   
+                    content: "";
+                    top: 100%;
+                    border: 3px solid transparent;
+                }
+            }
+
+            &:hover {
+                span {
+                    display: block;
+                    z-index: 1;
+                }
+            }
+        }
+
+        &.red-hover {
+            .column {
+                &:hover {
+                    background-color: $basicRed;
+
+                    span {
+                        background-color: $basicRed;
+
+                        &::before {
+                            border-top-color: $basicRed;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.blue-hover {
+            .column {
+                &:hover {
+                    background-color: $basicBlue;
+
+                    span {
+                        background-color: $basicBlue;
+
+                        &::before {
+                            border-top-color: $basicBlue;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    & + .page-header-chart {
+        margin-left: 78px;
+    }
+}
+
