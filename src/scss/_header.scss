@@ -4,7 +4,7 @@
     padding: 19px 39px 19px $asideWidth;
     z-index: 90;
     background-color: $headerBg;
-    border: $borderStyle;
+    border: $headerBorder;
     box-shadow: 0 6px 20px rgba(0, 0, 0, .1);
 
     .header-content {
@@ -16,29 +16,13 @@
                 font-size: .875rem;
                 color: #9da0a4;
             }
-
-            .search-input {
-                max-width: $searchInputWidth;
-                width: 100%;
-                height: $searchInputHeight;
-                margin-left: 14px;
-                font-family: 'ralewayregular', sans-serif;
-                font-size: .875rem;
-                color: #9da0a4;
-                border: none;
-
-                &::-webkit-input-placeholder {color: #9da0a4;}
-                &::-moz-placeholder {color: #9da0a4;}
-                &:-moz-placeholder {color: #9da0a4;}
-                &:-ms-input-placeholder {color: #9da0a4;}
-            }
         }
 
         .user-controls {
             .dropdown-items-wrap {
                 padding: 5px 30px;
-                border-left: $borderStyle;
-                border-right: $borderStyle;
+                border-left: $headerBorder;
+                border-right: $headerBorder;
 
                 .dropdown-item {
                     

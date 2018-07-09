@@ -38,6 +38,10 @@ textarea {
 }
 input {
     outline: none;
+    border: none;
+}
+label {
+    user-select: none;
 }
 button {
     outline: none;
