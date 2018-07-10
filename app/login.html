@@ -13,7 +13,19 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header id="header">
+    <header id="header" class="header-login d-flex align-items-center">
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/logo.png" alt="">
+            </a>
+        </div>
+        <!-- /.logo -->
+        <div class="menu-btn">
+            <span style="width: 30px"></span>
+            <span style="width: 16px"></span>
+            <span style="width: 22px"></span>                
+        </div>
+        <!-- /.menu-btn -->
         <div class="header-content d-flex align-items-center">
             <form class="d-flex align-items-center">
                 <label for="search-input"><i class="fas fa-search"></i></label>
@@ -51,7 +63,7 @@
     <!-- /#header -->
 
     <main id="main">
-        <div class="wrapper d-flex">
+        <div class="wrapper d-flex align-items-center">
             <div class="auth-container bg-white mx-auto">
                 <div class="auth-head d-flex align-items-center">
                     <div class="auth-head-title-container">
@@ -89,6 +101,21 @@
                             <input type="password" name="repeat-password" class="form-control" id="repeat-password">
                         </div>
                         <!-- /.form-group -->
+                        <div class="checkbox-group">
+                            <input type="checkbox" name="agree-terms" id="agree-terms">
+                            <label for="agree-terms">I agree to all <a href="#">Terms</a></label>
+                        </div>
+                        <!-- /.checkbox-group -->
+                        <div class="form-footer d-flex align-items-center">
+                            <button class="submit-btn"><span>Sign up</span></button>
+                            <nav class="social ml-auto">
+                                <a href="#" class="social-icon fb"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social-icon google"><i class="fab fa-google-plus-g"></i></a>
+                                <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+                            </nav>
+                            <!-- /.social -->
+                        </div>
+                        <!-- /.form-footer -->
                     </form>
                 </div>
                 <!-- /.auth-body -->

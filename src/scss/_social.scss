@@ -1,0 +1,29 @@
+.social {
+    .social-icon {
+        display: inline-block;
+        width: $socialIconWidth;
+        height: $socialIconHeigth;
+        font-size: .75rem;
+        color: #fff;
+        text-align: center;
+        line-height: $socialIconHeigth;
+        border-radius: 1px;
+
+        & + .social-icon {
+            margin-left: 10px;
+        }
+
+        &.fb {
+            background-color: $socialIconBlue;
+        }
+
+        &.google {
+            background-color: $socialIconRed;
+        }
+
+        &.twitter {
+            background-color: $socialIconLigthblue;
+        }
+
+    }
+}

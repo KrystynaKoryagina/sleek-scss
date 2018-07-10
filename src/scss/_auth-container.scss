@@ -1,40 +1,59 @@
-.auth-container {
-    max-width: $authWidth;
-    width: 100%;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, .06);
+.wrapper {
+    height: 100vh;
+    padding: 0 15px;
 
-    .auth-head {
-        padding: 35px 40px;
-        border-bottom: $authBorder;
-
-        .auth-head-title {
-            margin-bottom: 5px;
-            font-family: 'ralewaymedium', sans-serif;
-            font-size: 1.625rem;
-            color: #1d2025;
-        }
-
-        .auth-head-subtitle {
-            font-size: 1.125rem;
-            color: #999da5;
-        }
-    }
-
-    .auth-body {
-        padding: 35px 40px;
-
-        .form-group {
-            label {
-                display: inline-block;
-                margin-bottom: 10px;
+    .auth-container {
+        max-width: $authWidth;
+        width: 100%;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, .06);
+    
+        .auth-head {
+            padding: 35px 40px;
+            border-bottom: $authBorder;
+    
+            .auth-head-title {
+                margin-bottom: 5px;
                 font-family: 'ralewaymedium', sans-serif;
-                font-size: .875rem;
+                font-size: 1.625rem;
                 color: #1d2025;
             }
-
-            & + .form-group {
-                margin-top: 18px;
+    
+            .auth-head-subtitle {
+                font-size: 1.125rem;
+                color: #999da5;
+            }
+        }
+    
+        .auth-body {
+            padding: 35px 40px;
+    
+            .form-group {
+                label {
+                    display: inline-block;
+                    margin-bottom: 10px;
+                    font-family: 'ralewaymedium', sans-serif;
+                    font-size: .875rem;
+                    color: #1d2025;
+                }
+    
+                & + .form-group {
+                    margin-top: 18px;
+                }
+            }
+    
+            .checkbox-group {
+                margin: 25px 0;
+    
+                label {
+                    font-size: .875rem;
+                    color: #5d6066;
+    
+                    a {
+                        color: $basicBlue;
+                    }
+                }
             }
         }
     }
 }
+

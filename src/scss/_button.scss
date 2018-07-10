@@ -1,14 +1,34 @@
-.display-control-btn {
+%btn {
     display: inline-block;
-    padding: 20px;
-    font-family: 'ralewaymedium', sans-serif;
     font-size: .75rem;
     line-height: 1em;
-    color: #999da5;
+    text-align: center;
     text-transform: uppercase;
-    border: $authBorder;
+    border: $btnBorder;
+    border-radius: 2px; 
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .06); 
+}
+
+.menu-btn {
+    span {
+        display: block;
+        height: 2px;
+        background-color: $menuBtnBg;
+
+        & + span {
+            margin-top: 6px;
+        }
+    }
+}
+
+.display-control-btn {
+    @extend %btn;
+    padding: 20px;
+    font-family: 'ralewaymedium', sans-serif;
+    color: #999da5;
+    border-color: #eceff3;
     border-radius: 2px 0 0 2px;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, .06);
+
 
     &.active {
         color: #fff;
@@ -24,5 +44,41 @@
     &:last-child {
         border-left: none;
         border-radius: 0 2px 2px 0;
+    }
+}
+
+.submit-btn {
+    @extend %btn;
+    position: relative;
+    padding: 20px 30px;
+    border-color: #c1defd;
+    font-family: 'ralewaysemibold', sans-serif;
+    color: $basicBlue;
+    overflow: hidden;
+    transition: all .2s ease-in .2s;
+
+    span {
+        position: relative;
+        z-index: 1;
+    }
+
+    &::before {
+        @include absolute-to-top;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: $basicBlue;
+        transform: translateX(-100%);
+        transition: all .2s ease-in;
+    }
+
+    &:hover {
+        span {
+            color: #fff;
+        }
+    }
+
+    &:hover::before {
+        transform: translateX(0);
     }
 }

@@ -30,3 +30,22 @@
         box-shadow: 0 15px 30px rgba(0, 0, 0, .08);
     }
 }
+
+.checkbox-group {
+    input[type="checkbox"] {
+        display: none;
+
+        & + label::before {
+            content: "\f0c8";
+            display: inline-block;
+            margin-right: 13px;
+            font-family: "Font Awesome 5 Free";
+            font-size: .875rem;
+            color: #999da5;
+        }
+
+        &:checked + label::before {
+            content: "\f14a";
+        }
+    }
+}

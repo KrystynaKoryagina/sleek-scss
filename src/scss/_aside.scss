@@ -16,17 +16,7 @@
         padding: 15px 20px 15px 40px;
         border-bottom: 1px solid #e5e8ee;
 
-        .menu-btn {
-            span {
-                display: block;
-                height: 2px;
-                background-color: $menuBtnBg;
 
-                & + span {
-                    margin-top: 6px;
-                }
-            }
-        }
     }
 
     .menu-wrapper {
@@ -75,6 +65,5 @@
         }
 
     }
-
-
 }
+

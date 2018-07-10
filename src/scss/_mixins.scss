@@ -4,6 +4,12 @@
     left: $left;
 }
 
+@mixin absolute-to-top($top: 0, $left:0) {
+    position: absolute;
+    top: $top;
+    left: $left;
+}
+
 @mixin position-x-center {
     position: absolute;
     left: 50%;

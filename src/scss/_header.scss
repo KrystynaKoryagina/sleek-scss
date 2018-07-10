@@ -1,14 +1,28 @@
 #header {
     @include fixed-to-top;
     width: 100%;
-    padding: 19px 39px 19px $asideWidth;
+    padding-left: $asideWidth;
     z-index: 90;
     background-color: $headerBg;
     border: $headerBorder;
     box-shadow: 0 6px 20px rgba(0, 0, 0, .1);
 
-    .header-content {
+    &.header-login {
         padding-left: 39px;
+
+        .menu-btn {
+            margin-left: 75px;
+            margin-right: 20px;
+        }
+
+        .header-content {
+            width: 100%;
+            border-left: $headerBorder;
+        }
+    }
+
+    .header-content {
+        padding: 19px 39px;
         
         form {
             label {
