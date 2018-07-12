@@ -390,13 +390,6 @@ button:hover, button:active, button:focus {
      -moz-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.06);
           box-shadow: 0 15px 30px rgba(0, 0, 0, 0.06); }
 
-.menu-btn span {
-  display: block;
-  height: 2px;
-  background-color: #9a9fa7; }
-  .menu-btn span + span {
-    margin-top: 6px; }
-
 .display-control-btn {
   padding: 20px;
   font-family: 'ralewaymedium', sans-serif;
@@ -650,6 +643,25 @@ button:hover, button:active, button:focus {
          -moz-border-radius: 2px;
               border-radius: 2px; }
 
+.menu-btn {
+  cursor: pointer; }
+  .menu-btn span {
+    display: block;
+    height: 2px;
+    background-color: #9a9fa7; }
+    .menu-btn span + span {
+      margin-top: 6px; }
+
+.card {
+  width: 100%;
+  background-color: #fff;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  -webkit-box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+     -moz-box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06); }
+
 #main {
   padding-top: 93px; }
 
@@ -778,3 +790,99 @@ button:hover, button:active, button:focus {
           color: #5d6066; }
           .wrapper .auth-container .auth-body .checkbox-group label a {
             color: #1585ff; }
+
+.profile-wrapper {
+  padding: 50px 40px 80px; }
+  .profile-wrapper .profile-controls {
+    min-width: 1050px;
+    width: 60%;
+    padding: 0 25px; }
+    @media (max-width: 1919px) {
+      .profile-wrapper .profile-controls {
+        min-width: auto;
+        width: 100%;
+        -webkit-box-ordinal-group: 2;
+        -webkit-order: 1;
+           -moz-box-ordinal-group: 2;
+            -ms-flex-order: 1;
+                order: 1; } }
+  .profile-wrapper .profile-info {
+    min-width: 550px;
+    width: 34%;
+    padding: 0 25px; }
+    @media (max-width: 1919px) {
+      .profile-wrapper .profile-info {
+        max-width: auto;
+        width: 100%;
+        margin-bottom: 60px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+           -moz-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between; } }
+    .profile-wrapper .profile-info .card + .card {
+      margin-top: 60px; }
+      @media (max-width: 1919px) {
+        .profile-wrapper .profile-info .card + .card {
+          margin-top: 0; } }
+    @media (max-width: 1919px) {
+      .profile-wrapper .profile-info .card {
+        width: 48%; } }
+
+.tab-controls {
+  padding: 0 40px;
+  border-bottom: 2px solid #eceff3; }
+  .tab-controls a {
+    display: inline-block;
+    padding: 35px 20px 25px;
+    font-family: 'ralewaymedium', sans-serif;
+    font-size: .875rem;
+    color: #999da5;
+    border-top: 3px solid #fff; }
+    .tab-controls a.active {
+      color: #1585ff;
+      border-top-color: #1585ff;
+      background-color: #f2f4f7; }
+
+.activity-wrapper {
+  padding: 30px 15px 0 40px; }
+  .activity-wrapper .activity-day + .activity-day {
+    margin-top: 50px; }
+  .activity-wrapper .activity-day h3 {
+    margin-bottom: 30px; }
+  .activity-wrapper .activity-day .activity-item {
+    position: relative;
+    padding-bottom: 38px; }
+    .activity-wrapper .activity-day .activity-item::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 8px;
+      width: 1px;
+      height: 100%;
+      background-color: #eceff3; }
+    .activity-wrapper .activity-day .activity-item:last-child::before {
+      display: none; }
+    .activity-wrapper .activity-day .activity-item .activity-marker {
+      position: absolute;
+      top: -4px;
+      left: 0;
+      width: 16px;
+      height: 16px;
+      border: 3px solid transparent;
+      -webkit-border-radius: 50%;
+         -moz-border-radius: 50%;
+              border-radius: 50%; }
+      .activity-wrapper .activity-day .activity-item .activity-marker.green {
+        background-color: #0ac51b;
+        border-color: #c0f0c4; }
+    .activity-wrapper .activity-day .activity-item .activity-item-content {
+      padding-left: 36px; }

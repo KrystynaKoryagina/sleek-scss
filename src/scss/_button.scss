@@ -9,17 +9,7 @@
     box-shadow: 0 15px 30px rgba(0, 0, 0, .06); 
 }
 
-.menu-btn {
-    span {
-        display: block;
-        height: 2px;
-        background-color: $menuBtnBg;
 
-        & + span {
-            margin-top: 6px;
-        }
-    }
-}
 
 .display-control-btn {
     @extend %btn;
