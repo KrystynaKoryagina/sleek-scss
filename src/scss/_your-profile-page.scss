@@ -44,78 +44,142 @@
     }
 }
 
-.tab-controls {
-    padding: 0 40px;
-    border-bottom: 2px solid #eceff3;
+.profile-tabs {
 
-    a {
-        display: inline-block;
-        padding: 35px 20px 25px;
-        font-family: 'ralewaymedium', sans-serif;
-        font-size: .875rem;
-        color: #999da5;
-        border-top: 3px solid #fff;
-
-        &.active {
-            color: $basicBlue;
-            border-top-color: $basicBlue;
-            background-color: #f2f4f7;
+    .tab-controls {
+        padding: 0 40px;
+        border-bottom: 2px solid #eceff3;
+    
+        a {
+            display: inline-block;
+            padding: 35px 20px 25px;
+            font-family: 'ralewaymedium', sans-serif;
+            font-size: .875rem;
+            color: #999da5;
+            border-top: 3px solid #fff;
+    
+            &.active {
+                color: $basicBlue;
+                border-top-color: $basicBlue;
+                background-color: #f2f4f7;
+            }
         }
     }
-}
+    
+    .activity-wrapper {
+        padding: 30px 0 30px 40px;
 
-.activity-wrapper {
-    padding: 30px 15px 0 40px;
-
-    .activity-day {
-
-        & + .activity-day {
-            margin-top: 50px;
+        .scroll-wrapper {
+            height: 967px;
         }
-        
-        h3 {
-            margin-bottom: 30px;
-        }
-
-        .activity-item {
-            position: relative;
-            padding-bottom: 38px;
-
-            &::before {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 8px;
-                width: 1px;
-                height: 100%;
-                background-color:#eceff3;
+    
+        .activity-day {
+    
+            & + .activity-day {
+                margin-top: 50px;
             }
-
-            &:last-child {
+            
+            h3 {
+                margin-bottom: 30px;
+                font-family: 'ralewaysemibold', sans-serif;
+                font-size: .75rem;
+                color: #999da5;
+                text-transform: uppercase;
+            }
+    
+            .activity-item {
+                position: relative;
+                padding-bottom: 38px;
+                
+                 
                 &::before {
-                    display: none;
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 8px;
+                    width: 1px;
+                    height: 100%;
+                    background-color:#eceff3;
                 }
-            }
+    
+                &:last-child {
+                    padding-bottom: 0;
 
-            .activity-marker {
-                @include absolute-to-top(-4px);
-                width: 16px;
-                height: 16px;
-                border: 3px solid transparent;
-                border-radius: 50%;
+                    &::before {
+                        display: none;
+                    }
+                }
+    
+                .activity-marker {
+                    @include absolute-to-top(-2px);
+                    width: 16px;
+                    height: 16px;
+                    border: 3px solid transparent;
+                    border-radius: 50%;
+    
+                    &.green {
+                        background-color: #0ac51b;
+                        border-color: #c0f0c4;
+                    }
 
-                &.green {
-                    background-color: #0ac51b;
-                    border-color: #c0f0c4;
+                    &.violet {
+                        background-color: #886aef;
+                        border-color: #d2cdf2;
+                    }
+
+                    &.blue {
+                        background-color: #1585ff;
+                        border-color: #c2dfff; 
+                    }
+        
+                }
+    
+                .activity-item-content {
+                    padding-left: 36px;
+                    font-family: 'ralewaymedium', sans-serif;
+                    font-size:  .875rem;
+
+                    p {
+                        margin-bottom: 10px;
+                      
+                        span {
+                            color: #1d2025;
+                        }
+                    }
+
+                    .comment-text {
+                        display: inline-block;
+                        padding: 15px 20px;
+                        background-color: $commentBg;
+                        border: 1px solid #eceff3;
+                        border-radius: 2px;
+                    }
+
+                    .loaded-img {
+                        margin-top: 15px;
+                        margin-bottom: 15px;
+
+                        img {
+                            width: 80px;
+                            height: 80px;
+
+                            & + img {
+                                margin-left: 10px;
+                            }
+                        }
+                    }
+
+                    & > span {
+                        display: block;
+                        font-family: 'ralewayregular', sans-serif;
+                        color: #999da5;
+                    }
                 }
     
             }
-
-            .activity-item-content {
-                padding-left: 36px;
-            }
-
+    
         }
-
     }
+
 }
+

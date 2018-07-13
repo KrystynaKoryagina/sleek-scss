@@ -62,68 +62,108 @@
     </header>
     <!-- /#header -->
 
-    <main id="main">
-        <div class="wrapper d-flex align-items-center">
-            <div class="auth-container bg-white mx-auto">
-                <div class="auth-head d-flex align-items-center">
-                    <div class="auth-head-title-container">
-                        <h3 class="auth-head-title">Sign up</h3>
-                        <span class="auth-head-subtitle">Today and be our favoret</span>
-                    </div>
-                    <!-- /.auth-head-title-container -->
-                    <div class="form-display-controls d-flex
-                    ml-auto">
-                        <button class="display-control-btn">Sign in</button>
-                        <button class="display-control-btn active">Sign up</button>
-                    </div>
-                    <!-- /.form-display-controls -->
+    <main id="main" class="d-flex align-items-center">
+        <div class="auth-container bg-white mx-auto login-tabs">
+            <div class="auth-head d-flex align-items-center">
+                <div class="auth-head-title-container">
+                    <h3 class="auth-head-title">Sign up</h3>
+                    <span class="auth-head-subtitle">Today and be our favoret</span>
                 </div>
-                <!-- /.auth-head -->
-                <div class="auth-body">
-                    <form name="sign-up">
-                        <div class="form-group">
-                            <label for="username">Your username</label>
-                            <input type="text" name="username" class="form-control" id="username">
-                        </div>
-                        <!-- /.form-group -->
-                        <div class="form-group">
-                            <label for="email">Your Email Address</label>
-                            <input type="email" name="email" class="form-control" id="email">
-                        </div>
-                        <!-- /.form-group -->
-                        <div class="form-group">
-                            <label for="password">Your Password</label>
-                            <input type="password" name="password" class="form-control" id="password">
-                        </div>
-                        <!-- /.form-group -->
-                        <div class="form-group">
-                            <label for="repeat-password">Repeat Your Password</label>
-                            <input type="password" name="repeat-password" class="form-control" id="repeat-password">
-                        </div>
-                        <!-- /.form-group -->
-                        <div class="checkbox-group">
-                            <input type="checkbox" name="agree-terms" id="agree-terms">
-                            <label for="agree-terms">I agree to all <a href="#">Terms</a></label>
-                        </div>
-                        <!-- /.checkbox-group -->
-                        <div class="form-footer d-flex align-items-center">
-                            <button class="submit-btn"><span>Sign up</span></button>
-                            <nav class="social ml-auto">
-                                <a href="#" class="social-icon fb"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#" class="social-icon google"><i class="fab fa-google-plus-g"></i></a>
-                                <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
-                            </nav>
-                            <!-- /.social -->
-                        </div>
-                        <!-- /.form-footer -->
-                    </form>
-                </div>
-                <!-- /.auth-body -->
+                <!-- /.auth-head-title-container -->
+                <ul class="form-display-controls d-flex ml-auto">
+                    <li>
+                        <a href="#sign-in" class="display-control-btn">Sign in</a>
+                    </li>
+                    <li>
+                        <a href="#sign-up" class="display-control-btn active">Sign up</a>
+                    </li>
+                </ul>   
+                <!-- /.form-display-controls -->
             </div>
-            <!-- /.auth-container -->
+            <!-- /.auth-head -->
+            <div class="auth-body" id="sign-in">
+                <form name="sign-in">
+                    <div class="form-group">
+                        <label for="sign-in-name">Email or Name</label>
+                        <input type="text" name="sign-in-name" class="form-control" id="sign-in-name" placeholder="sleek@support.com">
+                    </div>
+                    <!-- /.form-group -->
+                    <div class="form-group">
+                        <label for="sign-in-pass">Password</label>
+                        <input type="password" name="sign-in-pass" class="form-control" id="sign-in-pass" placeholder="********">
+                    </div>
+                    <!-- /.form-group -->
+                    <div class="checkbox-group d-flex align-items-center">
+                        <input type="checkbox" name="remember-me" id="remember-me">
+                        <label for="remember-me">Remember me</label>
+                        <a href="#" class="ml-auto">Forgot password?</a>
+                    </div>
+                    <!-- /.checkbox-group -->
+                    <div class="form-footer d-flex align-items-center">
+                        <button class="submit-btn"><span>Sign in</span></button>
+                        <nav class="social ml-auto">
+                            <a href="#" class="social-icon fb"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon google"><i class="fab fa-google-plus-g"></i></a>
+                            <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+                        </nav>
+                        <!-- /.social -->
+                    </div>
+                    <!-- /.form-footer -->
+                </form>
+            </div>
+            <!-- /.auth-body -->
+            <div class="auth-body" id="sign-up">
+                <form name="sign-up">
+                    <div class="form-group">
+                        <label for="username">Your username</label>
+                        <input type="text" name="username" class="form-control" id="username"  placeholder="********">
+                    </div>
+                    <!-- /.form-group -->
+                    <div class="form-group">
+                        <label for="email">Your Email Address</label>
+                        <input type="email" name="email" class="form-control" id="email" placeholder="sleek@support.com">
+                    </div>
+                    <!-- /.form-group -->
+                    <div class="form-group">
+                        <label for="password">Your Password</label>
+                        <input type="password" name="password" class="form-control" id="password" placeholder="********">
+                    </div>
+                    <!-- /.form-group -->
+                    <div class="form-group">
+                        <label for="repeat-password">Repeat Your Password</label>
+                        <input type="password" name="repeat-password" class="form-control" id="repeat-password" placeholder="********">
+                    </div>
+                    <!-- /.form-group -->
+                    <div class="checkbox-group">
+                        <input type="checkbox" name="agree-terms" id="agree-terms">
+                        <label for="agree-terms">I agree to all <a href="#">Terms</a></label>
+                    </div>
+                    <!-- /.checkbox-group -->
+                    <div class="form-footer d-flex align-items-center">
+                        <button class="submit-btn"><span>Sign up</span></button>
+                        <nav class="social ml-auto">
+                            <a href="#" class="social-icon fb"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon google"><i class="fab fa-google-plus-g"></i></a>
+                            <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+                        </nav>
+                        <!-- /.social -->
+                    </div>
+                    <!-- /.form-footer -->
+                </form>
+            </div>
+            <!-- /.auth-body -->
         </div>
-        <!-- /.wrapper -->
+        <!-- /.auth-container -->
     </main>
     <!-- /#main -->
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <!-- jQuery UI-->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <!-- init -->
+    <script src="js/main/init.js"></script>
 </body>
 </html>

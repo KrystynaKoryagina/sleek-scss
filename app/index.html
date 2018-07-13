@@ -61,14 +61,14 @@
             <div class="menu-btn ml-auto">
                 <span style="width: 30px"></span>
                 <span style="width: 16px"></span>
-                <span style="width: 22px"></span>                
+                <span style="width: 22px"></span>
             </div>
             <!-- /.menu-btn -->
         </div>
         <!-- /.aside-head -->
         <div class="menu-wrapper d-flex flex-column">
             <h6 class="menu-title">Menu</h6>
-            <nav class="aside-nav">
+            <nav class="aside-nav scrollbar-inner">
                 <a href="#"><i class="fas fa-home"></i>Overview</a>
                 <a href="#"><i class="fas fa-chart-bar"></i>Analytics</a>
                 <a href="#" class="active"><i class="fas fa-user"></i>Your Profile</a>
@@ -88,7 +88,7 @@
     </aside>
     <!-- /#aside -->
 
-    <main id="main" class="profile">
+    <main id="main" class="profile d-flex flex-column">
         <div class="page-header d-flex align-items-center bg-white">
             <div class="page-header-info">
                 <h3 class="page-title">Your profile</h3>
@@ -185,54 +185,150 @@
         <div class="profile-wrapper d-flex flex-wrap">
             <div class="profile-controls">
                 <div class="card">
-                    <ul class="tab-controls d-flex">
-                        <li>
-                            <a href="" class="active">Activity</a>
-                        </li>
-                        <li>
-                            <a href="">Profile</a>
-                        </li>
-                        <li>
-                            <a href="">Messages</a>
-                        </li>
-                        <li>
-                            <a href="">Settings</a>
-                        </li>
-                    </ul>
-                    <!-- /.tab-controls -->
-                    <div class="tab-content">
-                        <div class="tab-pane">
-                            <div class="activity-wrapper">
+                    <div class="profile-tabs">
+                        <ul class="tab-controls d-flex">
+                            <li>
+                                <a href="#activity" class="active">Activity</a>
+                            </li>
+                            <li>
+                                <a href="#profile">Profile</a>
+                            </li>
+                            <li>
+                                <a href="#messages">Messages</a>
+                            </li>
+                            <li>
+                                <a href="#settings">Settings</a>
+                            </li>
+                        </ul>
+                        <!-- /.tab-controls -->
+                        <div id="activity" class="activity-wrapper">
+                            <div class="scrollbar-inner">
                                 <div class="activity-day">
                                     <h3>Today</h3>
                                     <div class="activity-item">
                                         <div class="activity-marker green"></div>
+                                        <!-- /.activity-marker -->
                                         <div class="activity-item-content">
                                             <p>Gerald Vaughn changed the status to QA on <span>MA-76 - Retargeting Ads</span></p>
                                             <span>New dashboard Design 2017 - 7:20PM</span>
                                         </div>
                                         <!-- /.activity-item-content -->
+                                        
+                                    </div>
+                                    <!-- /.activity-item -->
+                                    <div class="activity-item">
+                                        <div class="activity-marker violet"></div>
                                         <!-- /.activity-marker -->
+                                        <div class="activity-item-content">
+                                            <p>Gerald Vaughn commented on <span>MA-76 - Retargeting Ads</span></p>
+                                            <p class="comment-text">I've prepared all size's for you, Can you take a look tonight so we can prepare my final invoice?</p>
+                                            <!-- /.comment-text -->
+                                            <span>Portfolio Updates for Jason Carroll - 9:20PM</span>
+                                        </div>
+                                        <!-- /.activity-item-content -->
                                     </div>
                                     <!-- /.activity-item -->
                                     <div class="activity-item">
                                         <div class="activity-marker green"></div>
+                                        <!-- /.activity-marker -->
+                                        <div class="activity-item-content">
+                                            <p>Gerald Vaughn changed the status to QA on <span>MA-55 - Finish Prototype</span></p>
+                                            <span>New dashboard Design 2017 - 9:44PM</span>
+                                        </div>
+                                        <!-- /.activity-item-content -->
+                                    </div>
+                                    <!-- /.activity-item -->
+                                </div>
+                                <!-- /.activity-day -->
+                                <div class="activity-day">
+                                    <h3>Yesterday</h3>
+                                    <div class="activity-item">
+                                        <div class="activity-marker blue"></div>
+                                        <!-- /.activity-marker -->
+                                        <div class="activity-item-content">
+                                            <p>Gerald Vaughn attached 6 files to <span>9054 - Find good stocks for our Instagram channel</span></p>
+                                            <div class="loaded-img">
+                                                <img src="img/load-img.png" alt="">
+                                                <img src="img/load-img.png" alt="">
+                                                <img src="img/load-img.png" alt="">
+                                                <img src="img/load-img.png" alt="">
+                                                <img src="img/load-img.png" alt="">
+                                                <img src="img/load-img.png" alt="">
+                                            </div>
+                                            <!-- /.loaded-img -->
+                                            <span>Marketing Templates & Strategy - 6:43PM</span>
+                                        </div>
+                                        <!-- /.activity-item-content -->
+                                        
+                                    </div>
+                                    <!-- /.activity-item -->
+                                    <div class="activity-item">
+                                        <div class="activity-marker violet"></div>
+                                        <!-- /.activity-marker -->
+                                        <div class="activity-item-content">
+                                            <p>Gerald Vaughn commented on <span>9054 - Find good stocks for our Instagram channel</span></p>
+                                            <p class="comment-text">What do you think about these? Should I continue in this style?</p>
+                                            <!-- /.comment-text -->
+                                            <span>Marketing Templates & Strategy - 6:42PM</span>
+                                        </div>
+                                        <!-- /.activity-item-content -->
+                                    </div>
+                                    <!-- /.activity-item -->
+                                </div>
+                                <!-- /.activity-day -->
+                                <div class="activity-day">
+                                    <h3>14 February</h3>
+                                    <div class="activity-item">
+                                        <div class="activity-marker blue"></div>
+                                        <!-- /.activity-marker -->
+                                        <div class="activity-item-content">
+                                            <p>Gerald Vaughn attached 7 files to <span>1024 - Background Inspiration</span></p>
+                                            <div class="loaded-img">
+                                                <img src="img/load-img.png" alt="">
+                                                <img src="img/load-img.png" alt="">
+                                                <img src="img/load-img.png" alt="">
+                                                <img src="img/load-img.png" alt="">
+                                                <img src="img/load-img.png" alt="">
+                                                <img src="img/load-img.png" alt="">
+                                                <img src="img/load-img.png" alt="">
+                                            </div>
+                                            <!-- /.loaded-img -->
+                                            <span>Marketing Templates & Strategy - 6:43PM</span>
+                                        </div>
+                                        <!-- /.activity-item-content -->
+                                    </div>
+                                    <!-- /.activity-item -->
+                                    <div class="activity-item">
+                                        <div class="activity-marker violet"></div>
+                                        <!-- /.activity-marker -->
+                                        <div class="activity-item-content">
+                                            <p>Gerald Vaughn commented on <span>9054 - Find good stocks for our Instagram channel</span></p>
+                                            <p class="comment-text">What do you think about these? Should I continue in this style?</p>
+                                            <!-- /.comment-text -->
+                                            <span>Marketing Templates & Strategy - 6:42PM</span>
+                                        </div>
+                                        <!-- /.activity-item-content -->
+                                    </div>
+                                    <!-- /.activity-item -->
+                                    <div class="activity-item">
+                                        <div class="activity-marker green"></div>
+                                        <!-- /.activity-marker -->
                                         <div class="activity-item-content">
                                             <p>Gerald Vaughn changed the status to QA on <span>MA-76 - Retargeting Ads</span></p>
                                             <span>New dashboard Design 2017 - 7:20PM</span>
                                         </div>
                                         <!-- /.activity-item-content -->
-                                        <!-- /.activity-marker -->
                                     </div>
                                     <!-- /.activity-item -->
+    
                                 </div>
                                 <!-- /.activity-day -->
                             </div>
-                            <!-- /.activity-wrapper -->
+                            <!-- /.scrollbar-inner -->
                         </div>
-                        <!-- /.tab-pane -->
+                        <!-- /.activity-wrapper -->
                     </div>
-                    <!-- /.tab-content -->
+                    <!-- /.profile-tabs -->
                 </div>
                 <!-- /.card -->
             </div>
@@ -246,9 +342,22 @@
             <!-- /.profile-info -->
         </div>
         <!-- /.profile-wrapper -->
-        <div id="footer"></div>
+        <div id="footer" class="mt-auto"></div>
         <!-- /#footer -->
     </main>
     <!-- /#main -->
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <!-- jQuery UI-->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <!-- jQuery scrollbar -->
+    <script src="js/lib/jquery.scrollbar.min.js"></script>
+
+    <!-- init -->
+    <script src="js/main/init.js"></script>
+
 </body>
 </html>

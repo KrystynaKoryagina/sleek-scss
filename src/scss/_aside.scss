@@ -21,7 +21,7 @@
         height: calc(100vh - 93px);
         padding-top: 45px;
         padding-bottom: 30px;
-        overflow-y: auto;
+        // overflow-y: auto;
 
         .menu-title {
             margin-left: 40px;
@@ -32,6 +32,7 @@
         }
         
         .aside-nav {
+            min-height: 370px;
             a {
                 display: block;
                 padding: 20px 15px 20px 34px;

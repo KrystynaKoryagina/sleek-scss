@@ -9,34 +9,6 @@
     box-shadow: 0 15px 30px rgba(0, 0, 0, .06); 
 }
 
-
-
-.display-control-btn {
-    @extend %btn;
-    padding: 20px;
-    font-family: 'ralewaymedium', sans-serif;
-    color: #999da5;
-    border-color: #eceff3;
-    border-radius: 2px 0 0 2px;
-
-
-    &.active {
-        color: #fff;
-        background-color: $basicBlue;
-        border-color:  $basicBlue;
-        box-shadow: none;
-    }
-
-    &:first-child {
-        border-right: none;
-    }
-
-    &:last-child {
-        border-left: none;
-        border-radius: 0 2px 2px 0;
-    }
-}
-
 .submit-btn {
     @extend %btn;
     position: relative;

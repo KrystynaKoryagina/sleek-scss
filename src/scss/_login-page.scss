@@ -1,0 +1,98 @@
+.auth-container {
+    max-width: $authWidth;
+    width: 100%;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .06);
+
+    .auth-head {
+        padding: 35px 40px;
+        border-bottom: $authBorder;
+
+        .auth-head-title {
+            margin-bottom: 5px;
+            font-family: 'ralewaymedium', sans-serif;
+            font-size: 1.625rem;
+            color: #1d2025;
+        }
+
+        .auth-head-subtitle {
+            font-size: 1.125rem;
+            color: #999da5;
+        }
+
+        .form-display-controls {
+            li {
+                .display-control-btn {
+                    @extend %btn;
+                    padding: 20px;
+                    font-family: 'ralewaymedium', sans-serif;
+                    color: #999da5;
+                    border-color: #eceff3;
+                    border-radius: 2px 0 0 2px;
+                }
+
+                &.ui-tabs-active {
+                    .display-control-btn {
+                        color: #fff;
+                        background-color: $basicBlue;
+                        border-color:  $basicBlue;
+                        box-shadow: none;
+                    }
+                }
+
+                &:first-child {
+                    .display-control-btn {
+                        border-right: none;
+                    }
+                }
+
+                &:last-child {
+                    .display-control-btn {
+                        border-left: none;
+                        border-radius: 0 2px 2px 0;
+                    }
+                }
+            }
+       }
+    }
+
+    .auth-body {
+        padding: 35px 40px;
+
+        .form-group {
+            
+            & + .form-group {
+                margin-top: 18px;
+            }
+
+            label {
+                display: inline-block;
+                margin-bottom: 10px;
+                font-family: 'ralewaymedium', sans-serif;
+                font-size: .875rem;
+                color: #1d2025;
+            }
+
+
+        }
+
+        .checkbox-group {
+            margin: 25px 0;
+
+            label {
+                font-size: .875rem;
+                color: #5d6066;
+
+                a {
+                    color: $basicBlue;
+                }
+            }
+
+            a {
+                font-size: .875rem;
+                color: $basicBlue;
+            }
+        }
+    }
+}
+
+
