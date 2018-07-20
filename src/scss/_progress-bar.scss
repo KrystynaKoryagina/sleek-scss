@@ -1,0 +1,87 @@
+.progress-bar {
+    position: relative;
+    width: 100%;
+    height: 22px;
+    padding: 3px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    background-clip: content-box;
+
+    &.blue {
+        border-color: #9bc2ed;
+        background-color: #e6eff8;
+    }
+
+    &.red {
+        border-color: #eba7b4;
+        background-color: #f9eef0;
+
+    }
+
+    &.aqua {
+        border-color: #8bdbe5;
+        background-color: #e4f3f5;
+    }
+
+    &.green {
+        border-color: #9adca0;
+        background-color: #e8f6e9;
+    }
+
+    .progress {
+        @include absolute-to-top(3px, 3px);
+        bottom: 3px;
+        transition: all .2s linear;
+        max-width: calc(100% - 6px - 23px);
+        
+        &.progress-blue {
+            background-color: $basicBlue;
+
+            &.progress-blue::after {
+                border-bottom-color: $basicBlue;
+            }
+        }
+
+        &.progress-red {
+            background-color: #fc4b6c;
+
+            &.progress-red::after {
+                border-bottom-color: #fc4b6c;
+            }
+        }
+
+        &.progress-aqua {
+            background-color: #26c6da;
+
+            &.progress-aqua::after {
+                border-bottom-color: #26c6da;
+            }
+        }
+
+        &.progress-green {
+            background-color: $basicGreen;
+
+            &.progress-green::after {
+                border-bottom-color: $basicGreen;
+            }
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: -32px;
+            right: -23px;
+            border: 23px solid transparent;
+            border-bottom-color: transparent;
+        }
+
+        span {
+            position: absolute;
+            right: 0;
+            top: -30px;
+            font-family: 'ralewaymedium', sans-serif;
+            font-size: .875rem;
+        }
+    }
+}
+

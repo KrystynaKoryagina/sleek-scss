@@ -30,7 +30,7 @@
                     border-radius: 2px 0 0 2px;
                 }
 
-                &.ui-tabs-active {
+                &.ui-state-active {
                     .display-control-btn {
                         color: #fff;
                         background-color: $basicBlue;
@@ -63,16 +63,6 @@
             & + .form-group {
                 margin-top: 18px;
             }
-
-            label {
-                display: inline-block;
-                margin-bottom: 10px;
-                font-family: 'ralewaymedium', sans-serif;
-                font-size: .875rem;
-                color: #1d2025;
-            }
-
-
         }
 
         .checkbox-group {

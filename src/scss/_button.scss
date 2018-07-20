@@ -4,7 +4,7 @@
     line-height: 1em;
     text-align: center;
     text-transform: uppercase;
-    border: $btnBorder;
+    border: 1px solid transparent;
     border-radius: 2px; 
     box-shadow: 0 15px 30px rgba(0, 0, 0, .06); 
 }
@@ -25,9 +25,9 @@
     }
 
     &::before {
-        @include absolute-to-top;
+        @include absolute-to-top(0px, -1px);
         content: "";
-        width: 100%;
+        right: 0;
         height: 100%;
         background-color: $basicBlue;
         transform: translateX(-100%);

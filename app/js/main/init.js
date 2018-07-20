@@ -14,6 +14,11 @@ $( function() {
     if($('.scrollbar-inner').length) {
         $( '.scrollbar-inner' ).scrollbar(); 
     }
+
+    // init form styler
+    if($('.select-styler').length) {
+        $( '.select-styler' ).styler(); 
+    }
 } );
 
 

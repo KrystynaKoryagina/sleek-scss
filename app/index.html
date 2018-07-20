@@ -9,6 +9,10 @@
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 
+    <!-- Form styler -->
+    <link rel="stylesheet" href="css/jquery.formstyler.css">
+    <link rel="stylesheet" href="css/jquery.formstyler.theme.css">
+
     <!-- Custom styles -->
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -182,13 +186,13 @@
             <!-- /.page-header-charts-wrap -->
         </div>
         <!-- /.page-header -->
-        <div class="profile-wrapper d-flex flex-wrap">
+        <div class="profile-container d-flex flex-wrap">
             <div class="profile-controls">
                 <div class="card">
                     <div class="profile-tabs">
                         <ul class="tab-controls d-flex">
                             <li>
-                                <a href="#activity" class="active">Activity</a>
+                                <a href="#activity">Activity</a>
                             </li>
                             <li>
                                 <a href="#profile">Profile</a>
@@ -206,7 +210,7 @@
                                 <div class="activity-day">
                                     <h3>Today</h3>
                                     <div class="activity-item">
-                                        <div class="activity-marker green"></div>
+                                        <div class="activity-marker green-marker"></div>
                                         <!-- /.activity-marker -->
                                         <div class="activity-item-content">
                                             <p>Gerald Vaughn changed the status to QA on <span>MA-76 - Retargeting Ads</span></p>
@@ -217,7 +221,7 @@
                                     </div>
                                     <!-- /.activity-item -->
                                     <div class="activity-item">
-                                        <div class="activity-marker violet"></div>
+                                        <div class="activity-marker violet-marker"></div>
                                         <!-- /.activity-marker -->
                                         <div class="activity-item-content">
                                             <p>Gerald Vaughn commented on <span>MA-76 - Retargeting Ads</span></p>
@@ -229,7 +233,7 @@
                                     </div>
                                     <!-- /.activity-item -->
                                     <div class="activity-item">
-                                        <div class="activity-marker green"></div>
+                                        <div class="activity-marker green-marker"></div>
                                         <!-- /.activity-marker -->
                                         <div class="activity-item-content">
                                             <p>Gerald Vaughn changed the status to QA on <span>MA-55 - Finish Prototype</span></p>
@@ -243,7 +247,7 @@
                                 <div class="activity-day">
                                     <h3>Yesterday</h3>
                                     <div class="activity-item">
-                                        <div class="activity-marker blue"></div>
+                                        <div class="activity-marker blue-marker"></div>
                                         <!-- /.activity-marker -->
                                         <div class="activity-item-content">
                                             <p>Gerald Vaughn attached 6 files to <span>9054 - Find good stocks for our Instagram channel</span></p>
@@ -259,11 +263,10 @@
                                             <span>Marketing Templates & Strategy - 6:43PM</span>
                                         </div>
                                         <!-- /.activity-item-content -->
-                                        
-                                    </div>
+                                   </div>
                                     <!-- /.activity-item -->
                                     <div class="activity-item">
-                                        <div class="activity-marker violet"></div>
+                                        <div class="activity-marker violet-marker"></div>
                                         <!-- /.activity-marker -->
                                         <div class="activity-item-content">
                                             <p>Gerald Vaughn commented on <span>9054 - Find good stocks for our Instagram channel</span></p>
@@ -279,7 +282,7 @@
                                 <div class="activity-day">
                                     <h3>14 February</h3>
                                     <div class="activity-item">
-                                        <div class="activity-marker blue"></div>
+                                        <div class="activity-marker blue-marker"></div>
                                         <!-- /.activity-marker -->
                                         <div class="activity-item-content">
                                             <p>Gerald Vaughn attached 7 files to <span>1024 - Background Inspiration</span></p>
@@ -299,7 +302,7 @@
                                     </div>
                                     <!-- /.activity-item -->
                                     <div class="activity-item">
-                                        <div class="activity-marker violet"></div>
+                                        <div class="activity-marker violet-marker"></div>
                                         <!-- /.activity-marker -->
                                         <div class="activity-item-content">
                                             <p>Gerald Vaughn commented on <span>9054 - Find good stocks for our Instagram channel</span></p>
@@ -311,7 +314,7 @@
                                     </div>
                                     <!-- /.activity-item -->
                                     <div class="activity-item">
-                                        <div class="activity-marker green"></div>
+                                        <div class="activity-marker green-marker"></div>
                                         <!-- /.activity-marker -->
                                         <div class="activity-item-content">
                                             <p>Gerald Vaughn changed the status to QA on <span>MA-76 - Retargeting Ads</span></p>
@@ -327,6 +330,207 @@
                             <!-- /.scrollbar-inner -->
                         </div>
                         <!-- /.activity-wrapper -->
+                        <div id="profile" class="profile-wrapper">
+                            <div class="about-user d-flex flex-wrap">
+                                <div class="user-photo">
+                                    <img src="img/user-photo.jpg" alt="">
+                                </div>
+                                <!-- /.user-photo -->
+                                <div class="user-info d-flex flex-wrap ml-auto">
+                                    <div class="user-info-item">
+                                        <h3 class="user-info-title">Full Name</h3>
+                                        <span>Wisteria Ravenclaw</span>
+                                    </div>
+                                    <!-- /.user-info-item -->
+                                    <div class="user-info-item">
+                                        <h3 class="user-info-title">Email</h3>
+                                        <span><a href="mailto:wisteria@support.com">wisteria@support.com</a></span>
+                                    </div>
+                                    <!-- /.user-info-item -->
+                                    <div class="user-info-item">
+                                        <h3 class="user-info-title">Mobile</h3>
+                                        <span><a tel="+964431745542">(+964) 431 745 542</a></span>
+                                    </div>
+                                    <!-- /.user-info-item -->
+                                    <div class="user-info-item">
+                                        <h3 class="user-info-title">Address</h3>
+                                        <span>London, United Kingdom</span>
+                                    </div>
+                                    <!-- /.user-info-item -->
+                                    <div class="user-info-item">
+                                        <h3 class="user-info-title">About me</h3>
+                                        <p>Hi, adipisci sagittis, felis arcu dignissimos exercitationem nascetur qui accusantium inceptos fugit eos aliqua hymenaeos quae pariatur consectetuer penatibus illo ornare vehicula dolorum saepe eligendi? Facilis laborum. Amet voluptatum fusce faucibus habitant. Dolor ut labore mollitia ea? Fusce ducimus explicabo sagittis itaque fermentum, ab irure pariatur hac, magnis massa, illo, quas dictum totam molestias ut platea, eiusmod! Habitant laoreet! Quaerat sit malesuada provident laudantium, incidunt! Rerum inventore dolore, optio netus corporis. Exercitation consequatur, veniam illum placeat mollit ante congue maiores lobortis! Ante blanditiis amet proident sit justo fuga.</p>
+                                    </div>
+                                    <!-- /.user-info-item -->
+                                </div>
+                                <!-- /.user-info -->
+                            </div>
+                            <!-- /.about-user -->
+                            <div class="skills-wrapper">
+                                <div class="skills-title">
+                                    <h3>Skill Set</h3>
+                                </div>
+                                <!-- /.skills-title -->
+                                <span class="subtitle">Sequi primis quisquam iure elit euismod purus impedit dolor lorem.</span>
+
+                                <div class="user-skills">
+                                    <div class="skill-item">
+                                        <span class="skill-name">Web Design</span>
+                                        <div class="progress-bar blue">
+                                            <div class="progress progress-blue" style="width: 80%">
+                                                <span>80%</span>
+                                            </div>
+                                        </div>
+                                        <!-- /.progress-bar -->
+                                    </div>
+                                    <!-- /.skill-item -->
+                                    <div class="skill-item">
+                                        <span class="skill-name">Photoshop</span>
+                                        <div class="progress-bar red">
+                                            <div class="progress progress-red" style="width: 95%">
+                                                <span>95%</span>
+                                            </div>
+                                        </div>
+                                        <!-- /.progress-bar -->
+                                    </div>
+                                    <!-- /.skill-item -->
+                                    <div class="skill-item">
+                                        <span class="skill-name">jQuery</span>
+                                        <div class="progress-bar aqua">
+                                            <div class="progress progress-aqua" style="width: 75%">
+                                                <span>75%</span>
+                                            </div>
+                                        </div>
+                                        <!-- /.progress-bar -->
+                                    </div>
+                                    <!-- /.skill-item -->
+                                    <div class="skill-item">
+                                        <span class="skill-name">Wordpress</span>
+                                        <div class="progress-bar green">
+                                            <div class="progress progress-green" style="width: 85%">
+                                                <span>85%</span>
+                                            </div>
+                                        </div>
+                                        <!-- /.progress-bar -->
+                                    </div>
+                                    <!-- /.skill-item -->
+                                </div>
+                                <!-- /.user-skills -->
+                            </div>
+                            <!-- /.skills-wrapper -->
+                        </div>
+                        <!-- /.profile-wrapper -->
+                        <div class="messages-wrapper" id="messages">
+                            <div class="message-item to d-flex">
+                                <img class="messanger-avatar mb-auto" src="img/messanger-avatar.png" alt="">
+                                <div class="message mr-auto">
+                                    <span class="message-info"><span>Lurch Schpellchek</span> | 4 minutes ago</span>
+                                    <p>Adipisci sagittis, felis arcu dignissimos exercitationem nascetur qui accusantium inceptos fugit eos aliqua hymenaeos quae pariatur consectetuer quae penatibus illo ornare vehicula dolorum saepe eligendi? Facilis laborum.</p>
+                                </div>
+                                <!-- /.message -->
+                            </div>
+                            <!-- /.message-item -->
+                            <div class="message-item from d-flex">
+                                <div class="message ml-auto">
+                                    <span class="message-info"><span>Phillip Anthropy</span> | 5 minutes ago</span>
+                                    <p>Adipisci sagittis, felis quae arcu dignissimos exercitationem nascetur qui accusantium inceptos fugit eos aliqua hymenaeos quae pariatur consectetuer penatibus illo ornare vehicula dolorum saepe eligendi? Facilis laborum.</p>
+                                </div>
+                                <!-- /.message -->
+                                <img class="messanger-avatar mb-auto" src="img/messanger-avatar.png" alt="">
+                            </div>
+                            <!-- /.message-item -->
+                            <div class="message-item to d-flex">
+                                <img class="messanger-avatar mb-auto" src="img/messanger-avatar.png" alt="">
+                                <div class="message mr-auto">
+                                    <span class="message-info"><span>Lurch Schpellchek</span> | 4 minutes ago</span>
+                                    <p>Adipisci sagittis, felis arcu dignissimos exercitationem nascetur qui accusantium inceptos fugit eos aliqua hymenaeos quae pariatur consectetuer quae penatibus illo ornare vehicula dolorum saepe eligendi? Facilis laborum.</p>
+                                </div>
+                                <!-- /.message -->
+                            </div>
+                            <!-- /.message-item -->
+                            <div class="message-item from d-flex">
+                                <div class="message ml-auto">
+                                    <span class="message-info"><span>Phillip Anthropy</span> | 5 minutes ago</span>
+                                    <p>Adipisci sagittis, felis quae arcu dignissimos exercitationem nascetur qui accusantium inceptos fugit eos aliqua hymenaeos quae pariatur consectetuer penatibus illo ornare vehicula dolorum saepe eligendi? Facilis laborum.</p>
+                                </div>
+                                <!-- /.message -->
+                                <img class="messanger-avatar mb-auto" src="img/messanger-avatar.png" alt="">
+                            </div>
+                            <!-- /.message-item -->
+                            <div class="message-item from d-flex">
+                                <div class="message ml-auto">
+                                    <span class="message-info"><span>Phillip Anthropy</span> | 7 minutes ago</span>
+                                    <p>Adipisci sagittis, felis quae arcu dignissimos exercitationem nascetur qui accusantium inceptos.</p>
+                                </div>
+                                <!-- /.message -->
+                                <img class="messanger-avatar mb-auto" src="img/messanger-avatar.png" alt="">
+                            </div>
+                            <!-- /.message-item -->
+                            <div class="write-message d-flex align-items-center">
+                                <div class="download-img">
+                                    <i class="fas fa-camera"></i>
+                                </div>
+                                <!-- /.download-img -->
+                                <form class="d-flex align-items-center">
+                                    <input type="text" class="form-control" name="message" placeholder="Write your message">
+                                    <button class="send-message">
+                                        <i class="fas fa-arrow-right"></i>
+                                    </button>
+                                </form>
+                            </div>
+                            <!-- /.write-message -->
+                        </div>
+                        <!-- /.messages-wrapper -->
+                        <div class="settings-wrapper" id="settings">
+                            <form name="setting-form" class="d-flex flex-wrap justify-content-between">
+                                <div class="form-group small">
+                                    <label for="first-name">First Name</label>
+                                    <input type="text" id="first-name" name="first-name" class="form-control" placeholder="Druid">
+                                </div>
+                                <!-- /.form-group -->
+                                <div class="form-group small">
+                                    <label for="last-name">Last Name</label>
+                                    <input type="text" id="last-name" name="last-name" class="form-control" placeholder="Wensleydale">
+                                </div>
+                                <!-- /.form-group -->
+                                <div class="form-group small">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" class="form-control" name="email" placeholder="wisteria@support.com">
+                                </div>
+                                <!-- /.form-group -->
+                                <div class="form-group small">
+                                    <label for="password">Password</label>
+                                    <input type="password" id="password" class="form-control" name="password" placeholder="********">
+                                </div>
+                                <!-- /.form-group -->
+                                <div class="form-group small">
+                                    <label for="phone">Phone No</label>
+                                    <input type="tel" id="phone" name="phone" class="form-control" placeholder="(+964) 431 745 542">
+                                </div>
+                                <!-- /.form-group -->
+                                <div class="form-group small">
+                                    <label for="counrty">Select Country</label>
+                                    <select name="country" id="country" class="select-styler">
+                                        <option value="">London</option>
+                                        <option value="">Ukraine</option>
+                                        <option value="">Russia</option>
+                                    </select>
+                                </div>
+                                <!-- /.form-group -->
+                                <div class="form-group">
+                                    <label for="website">Website</label>
+                                    <input type="url" name="website" id="website" class="form-control" placeholder="decentthemes.com">
+                                </div>
+                                <!-- /.form-group -->
+                                <div class="form-group">
+                                    <label for="message">Message</label>
+                                    <textarea name="message" id="message" class="form-control" placeholder="Write your message"></textarea>
+                                </div>
+                                <!-- /.form-group -->
+                                <button class="submit-btn ml-auto"><span>Update profile</span></button>
+                            </form>
+                        </div>
+                        <!-- /#settings -->
                     </div>
                     <!-- /.profile-tabs -->
                 </div>
@@ -341,8 +545,9 @@
             </div>
             <!-- /.profile-info -->
         </div>
-        <!-- /.profile-wrapper -->
-        <div id="footer" class="mt-auto"></div>
+        <!-- /.profile-container -->
+        <div id="footer" class="mt-auto">
+        </div>
         <!-- /#footer -->
     </main>
     <!-- /#main -->
@@ -355,6 +560,8 @@
 
     <!-- jQuery scrollbar -->
     <script src="js/lib/jquery.scrollbar.min.js"></script>
+    <!-- jQuery form styler -->
+    <script src="js/lib/jquery.formstyler.min.js"></script>
 
     <!-- init -->
     <script src="js/main/init.js"></script>
