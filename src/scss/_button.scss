@@ -5,8 +5,8 @@
     text-align: center;
     text-transform: uppercase;
     border: 1px solid transparent;
-    border-radius: 2px; 
-    box-shadow: 0 15px 30px rgba(0, 0, 0, .06); 
+    // border-radius: 2px; 
+    // box-shadow: 0 15px 30px rgba(0, 0, 0, .06); 
 }
 
 .submit-btn {
@@ -16,6 +16,8 @@
     border-color: #c1defd;
     font-family: 'ralewaysemibold', sans-serif;
     color: $basicBlue;
+    border-radius: 2px; 
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .06); 
     overflow: hidden;
     transition: all .2s ease-in .2s;
 

@@ -19,6 +19,13 @@
   font-style: normal;
   font-display: swap; }
 
+@font-face {
+  font-family: 'montserratlight';
+  src: url("../fonts/montserrat-light-webfont.woff2") format("woff2"), url("../fonts/montserrat-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; }
+
 /* RESET CSS */
 * {
   -webkit-box-sizing: border-box;
@@ -489,7 +496,6 @@ button:hover, button:active, button:focus {
   background-color: #f2f2f2; }
 
 .scrollbar-inner > .scroll-element .scroll-bar {
-  height: 79px !important;
   background-color: #b4bac2;
   -webkit-border-radius: 2px;
      -moz-border-radius: 2px;
@@ -1221,19 +1227,16 @@ button:hover, button:active, button:focus {
 .bg-red {
   background-color: #ff7473; }
 
-.submit-btn, .auth-container .auth-head .form-display-controls li .display-control-btn {
+.text-center {
+  text-align: center; }
+
+.submit-btn, .auth-container .auth-head .form-display-controls li .display-control-btn, .profile-container .profile-info .profile-user-wrapper .profile-user-info .profile-user-btn .profile-btn {
   display: inline-block;
   font-size: .75rem;
   line-height: 1em;
   text-align: center;
   text-transform: uppercase;
-  border: 1px solid transparent;
-  -webkit-border-radius: 2px;
-     -moz-border-radius: 2px;
-          border-radius: 2px;
-  -webkit-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.06);
-     -moz-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.06);
-          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.06); }
+  border: 1px solid transparent; }
 
 .submit-btn {
   position: relative;
@@ -1241,6 +1244,12 @@ button:hover, button:active, button:focus {
   border-color: #c1defd;
   font-family: 'ralewaysemibold', sans-serif;
   color: #1585ff;
+  -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+          border-radius: 2px;
+  -webkit-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.06);
+     -moz-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.06);
+          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.06);
   overflow: hidden;
   -webkit-transition: all .2s ease-in .2s;
   -o-transition: all .2s ease-in .2s;
@@ -1501,11 +1510,21 @@ label {
           box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06); }
 
 #main {
-  height: 100vh;
   padding-top: 93px; }
 
 #main.profile {
   padding-left: 290px; }
+
+#footer {
+  padding: 25px 40px;
+  background-color: #f0f0f0; }
+  #footer .copy {
+    font-family: 'montserratlight', sans-serif;
+    font-size: .6875rem;
+    text-transform: uppercase;
+    color: #a2a7af; }
+    #footer .copy a {
+      color: #80aadd; }
 
 .page-header {
   width: 100%;
@@ -1616,7 +1635,10 @@ label {
       border-color: #eceff3;
       -webkit-border-radius: 2px 0 0 2px;
          -moz-border-radius: 2px 0 0 2px;
-              border-radius: 2px 0 0 2px; }
+              border-radius: 2px 0 0 2px;
+      -webkit-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.06);
+         -moz-box-shadow: 0 15px 30px rgba(0, 0, 0, 0.06);
+              box-shadow: 0 15px 30px rgba(0, 0, 0, 0.06); }
     .auth-container .auth-head .form-display-controls li.ui-state-active .display-control-btn {
       color: #fff;
       background-color: #1585ff;
@@ -1647,11 +1669,11 @@ label {
         color: #1585ff; }
 
 .profile-container {
-  padding: 50px 40px 80px; }
+  padding: 50px 40px 80px;
+  min-height: 600px; }
   .profile-container .profile-controls {
-    min-width: 1050px;
-    width: 60%;
-    padding: 0 25px; }
+    min-width: 1000px;
+    width: 60%; }
     @media (max-width: 1919px) {
       .profile-container .profile-controls {
         min-width: auto;
@@ -1662,12 +1684,10 @@ label {
             -ms-flex-order: 1;
                 order: 1; } }
   .profile-container .profile-info {
-    min-width: 550px;
-    width: 34%;
-    padding: 0 25px; }
+    min-width: 495px;
+    width: 30%; }
     @media (max-width: 1919px) {
       .profile-container .profile-info {
-        max-width: auto;
         width: 100%;
         margin-bottom: 60px;
         display: -webkit-box;
@@ -1691,6 +1711,132 @@ label {
     @media (max-width: 1919px) {
       .profile-container .profile-info .card {
         width: 48%; } }
+    .profile-container .profile-info .profile-user-wrapper {
+      padding-top: 40px;
+      padding-left: 40px;
+      padding-right: 40px; }
+      .profile-container .profile-info .profile-user-wrapper .profile-user-info {
+        padding-bottom: 40px;
+        border-bottom: 1px solid #ebebeb; }
+        .profile-container .profile-info .profile-user-wrapper .profile-user-info .user-avatar {
+          -webkit-border-radius: 50%;
+             -moz-border-radius: 50%;
+                  border-radius: 50%; }
+          .profile-container .profile-info .profile-user-wrapper .profile-user-info .user-avatar img {
+            width: 100px;
+            height: 100px; }
+        .profile-container .profile-info .profile-user-wrapper .profile-user-info .profile-user-about {
+          padding-top: 25px;
+          padding-bottom: 35px;
+          font-family: 'ralewayregular', sans-serif;
+          font-size: .875rem;
+          line-height: 1.71em; }
+          .profile-container .profile-info .profile-user-wrapper .profile-user-info .profile-user-about .user-name {
+            font-family: 'ralewaymedium', sans-serif;
+            font-size: 1.125rem;
+            color: #1d2025; }
+          .profile-container .profile-info .profile-user-wrapper .profile-user-info .profile-user-about .user-address {
+            color: #999da5; }
+        .profile-container .profile-info .profile-user-wrapper .profile-user-info .profile-user-btn .profile-btn {
+          min-width: 170px;
+          padding: 20px 45px;
+          font-family: 'ralewayregular', sans-serif;
+          -webkit-border-radius: 30px;
+             -moz-border-radius: 30px;
+                  border-radius: 30px;
+          border-color: #c1defd;
+          color: #1585ff;
+          -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+             -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+          -webkit-transition: all .2s ease-in;
+          -o-transition: all .2s ease-in;
+          -moz-transition: all .2s ease-in;
+          transition: all .2s ease-in; }
+          .profile-container .profile-info .profile-user-wrapper .profile-user-info .profile-user-btn .profile-btn:hover {
+            color: #fff;
+            background-color: #1585ff;
+            border-color: #1585ff; }
+          .profile-container .profile-info .profile-user-wrapper .profile-user-info .profile-user-btn .profile-btn + .profile-btn {
+            margin-left: 20px; }
+      .profile-container .profile-info .profile-user-wrapper .profile-user-reviews {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #ebebeb; }
+        .profile-container .profile-info .profile-user-wrapper .profile-user-reviews .user-reviews-title {
+          font-family: 'ralewaymedium', sans-serif;
+          font-size: .75rem;
+          text-transform: uppercase;
+          margin-top: 10px;
+          display: block; }
+        .profile-container .profile-info .profile-user-wrapper .profile-user-reviews .count {
+          font-size: 1.375rem;
+          color: #1d2025; }
+        .profile-container .profile-info .profile-user-wrapper .profile-user-reviews .rating li {
+          font-size: .75rem;
+          display: inline-block; }
+          .profile-container .profile-info .profile-user-wrapper .profile-user-reviews .rating li i {
+            color: #ffbc0a; }
+            .profile-container .profile-info .profile-user-wrapper .profile-user-reviews .rating li i.grey {
+              color: #bfc1c3; }
+      .profile-container .profile-info .profile-user-wrapper .profile-user-work {
+        padding-top: 28px;
+        padding-bottom: 28px;
+        border-bottom: 1px solid #ebebeb; }
+        .profile-container .profile-info .profile-user-wrapper .profile-user-work .user-work-item {
+          font-size: .875rem;
+          color: #999da5; }
+          .profile-container .profile-info .profile-user-wrapper .profile-user-work .user-work-item + .user-work-item {
+            margin-top: 35px; }
+          .profile-container .profile-info .profile-user-wrapper .profile-user-work .user-work-item .user-work-about {
+            margin-left: 20px; }
+            .profile-container .profile-info .profile-user-wrapper .profile-user-work .user-work-item .user-work-about .user-post {
+              font-family: 'ralewaymedium', sans-serif;
+              color: #1d2025; }
+      .profile-container .profile-info .profile-user-wrapper .website {
+        padding-top: 25px;
+        padding-bottom: 25px;
+        font-size: .875rem;
+        color: #999da5; }
+    .profile-container .profile-info .profile-billing-wrapper {
+      padding-top: 35px;
+      padding-left: 40px;
+      padding-right: 40px; }
+      .profile-container .profile-info .profile-billing-wrapper .billing-plan-info {
+        padding-bottom: 25px;
+        border-bottom: 1px solid #ebebeb; }
+        .profile-container .profile-info .profile-billing-wrapper .billing-plan-info .change-billing-plan {
+          margin-bottom: 20px; }
+          .profile-container .profile-info .profile-billing-wrapper .billing-plan-info .change-billing-plan h6 {
+            font-family: 'ralewaymedium', sans-serif;
+            color: #1d2025; }
+          .profile-container .profile-info .profile-billing-wrapper .billing-plan-info .change-billing-plan a {
+            font-size: .875rem;
+            color: #999da5; }
+        .profile-container .profile-info .profile-billing-wrapper .billing-plan-info .bank-card-info {
+          font-family: 'ralewaymedium', sans-serif;
+          font-size: .875rem;
+          color: #1d2025; }
+          .profile-container .profile-info .profile-billing-wrapper .billing-plan-info .bank-card-info .bank-card-number {
+            margin-left: 20px; }
+          .profile-container .profile-info .profile-billing-wrapper .billing-plan-info .bank-card-info .bank-card-type {
+            margin-left: 30px;
+            font-family: 'ralewayregular', sans-serif;
+            color: #999da5;
+            text-transform: uppercase; }
+      .profile-container .profile-info .profile-billing-wrapper .billing-package-info {
+        padding-top: 30px;
+        padding-bottom: 30px; }
+        .profile-container .profile-info .profile-billing-wrapper .billing-package-info ul li {
+          font-size: .875rem;
+          color: #999da5; }
+          .profile-container .profile-info .profile-billing-wrapper .billing-package-info ul li + li {
+            margin-top: 20px; }
+        .profile-container .profile-info .profile-billing-wrapper .billing-package-info .package li {
+          font-family: 'ralewaymedium', sans-serif;
+          color: #1d2025; }
+        .profile-container .profile-info .profile-billing-wrapper .billing-package-info .downloads li {
+          color: #76797e; }
 
 .profile-tabs .tab-controls {
   padding: 0 40px;
@@ -1920,6 +2066,11 @@ label {
         height: 20px;
         background-color: transparent;
         border: none; }
+        .profile-tabs .messages-wrapper .write-message form .form-control:focus {
+          background-color: transparent;
+          -webkit-box-shadow: none;
+             -moz-box-shadow: none;
+                  box-shadow: none; }
       .profile-tabs .messages-wrapper .write-message form .send-message {
         padding: 25px 38px;
         -webkit-border-radius: 3px;

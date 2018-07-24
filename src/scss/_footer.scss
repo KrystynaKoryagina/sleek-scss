@@ -1,0 +1,16 @@
+#footer {
+    padding: 25px 40px;
+    background-color: $footerBg;
+
+    .copy {
+        font-family: 'montserratlight', sans-serif;
+        font-size: .6875rem;
+        text-transform: uppercase;
+        color: #a2a7af;
+
+        a {
+            color: #80aadd;
+        }
+    }
+
+}

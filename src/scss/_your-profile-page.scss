@@ -1,10 +1,11 @@
 .profile-container {
     padding: 50px 40px 80px;
+    min-height: 600px;
 
     .profile-controls {
-        min-width: 1050px;
+        min-width: 1000px;
         width: 60%;
-        padding: 0 25px;
+        // padding: 0 25px;
 
         @media (max-width: 1919px) {
             min-width: auto;
@@ -14,12 +15,12 @@
     }
 
     .profile-info {
-        min-width: 550px;
-        width: 34%;
-        padding: 0 25px;
+        min-width: 495px;
+        width: 30%;
+        // padding: 0 25px;
 
         @media (max-width: 1919px) {
-            max-width: auto;
+            // max-width: auto;
             width: 100%;
             margin-bottom: 60px;
             display: flex;
@@ -39,6 +40,212 @@
 
             @media (max-width: 1919px) {
                 width: 48%;
+            }
+
+        }
+
+        .profile-user-wrapper {
+            padding-top: 40px; 
+            padding-left: 40px;
+            padding-right: 40px;
+
+            .profile-user-info {
+                padding-bottom: 40px;
+                border-bottom: $profileInfoBorder;
+
+                .user-avatar {
+                    border-radius: 50%;
+    
+                    img {
+                        width: 100px;
+                        height: 100px;
+                    }
+                }
+
+                .profile-user-about {
+                    padding-top: 25px;
+                    padding-bottom: 35px;
+                    font-family: 'ralewayregular', sans-serif;
+                    font-size: .875rem;
+                    line-height: 1.71em;
+
+                    .user-name {
+                        font-family: 'ralewaymedium', sans-serif;
+                        font-size: 1.125rem;
+                        color: #1d2025;
+                    }
+
+                    .user-address {
+                        color: #999da5;
+                    }
+                }
+
+                .profile-user-btn {
+                    .profile-btn {
+                        @extend%btn;
+                        min-width: 170px;
+                        padding: 20px 45px;
+                        font-family: 'ralewayregular', sans-serif;
+                        border-radius: 30px;
+                        border-color: #c1defd;
+                        color: $basicBlue;
+                        box-shadow: 0 10px 20px rgba(0, 0, 0, .1);
+                        transition: all .2s ease-in;
+                        
+                        &:hover {
+                            color: #fff;
+                            background-color: $basicBlue;
+                            border-color: $basicBlue;
+                        }
+
+                        & + .profile-btn {
+                            margin-left: 20px;
+                        }
+                    }
+                }
+            }
+
+            .profile-user-reviews {
+                padding-top: 20px;
+                padding-bottom: 20px;
+                border-bottom: $profileInfoBorder;
+
+                .user-reviews-title {
+                    font-family: 'ralewaymedium', sans-serif;
+                    font-size: .75rem;
+                    text-transform: uppercase;
+                    margin-top: 10px;
+                    display: block;
+                }
+
+                .count {
+                    font-size: 1.375rem;
+                    color: #1d2025;
+                }
+
+                .rating {
+                    li {
+                        font-size: .75rem;
+                        display: inline-block;
+                        
+                        i {
+                            color: #ffbc0a;
+
+                            &.grey {
+                                color: #bfc1c3;
+                            }
+
+                        }
+
+
+                    }
+                }
+            }
+
+            .profile-user-work {
+                padding-top: 28px;
+                padding-bottom: 28px;
+                border-bottom: $profileInfoBorder;
+
+                .user-work-item {
+                    font-size: .875rem;
+                    color: #999da5;
+
+                    & + .user-work-item {
+                        margin-top: 35px;
+                    }
+
+                    .user-work-about {
+                        margin-left: 20px;
+
+                        .user-post {
+                            font-family: 'ralewaymedium', sans-serif;
+                            color: #1d2025;
+                        }
+                    }
+                }
+            }
+
+            .website {
+                padding-top: 25px;
+                padding-bottom: 25px;
+                font-size: .875rem;
+                color: #999da5;
+            }
+        }
+
+        .profile-billing-wrapper {
+            padding-top: 35px;
+            padding-left: 40px;
+            padding-right: 40px;
+
+            .billing-plan-info {
+                padding-bottom: 25px;
+                border-bottom: $profileInfoBorder;
+
+                .change-billing-plan {
+                    margin-bottom: 20px;
+
+                    h6 {
+                        font-family: 'ralewaymedium', sans-serif;
+                        color: #1d2025;
+                    }
+    
+                    a {
+                        font-size: .875rem;
+                        color: #999da5;
+                    }
+                }
+
+                .bank-card-info {
+                    font-family: 'ralewaymedium', sans-serif;
+                    font-size: .875rem;
+                    color: #1d2025;
+
+                    .bank-card-number {
+                        margin-left: 20px;
+                    }
+
+                    .bank-card-type {
+                        margin-left: 30px;
+                        font-family: 'ralewayregular', sans-serif;
+                        color: #999da5;
+                        text-transform: uppercase;
+                    }
+                }
+
+            }
+
+            .billing-package-info {
+                padding-top: 30px;
+                padding-bottom: 30px;
+
+                ul {
+
+                    li {
+                        font-size: .875rem;
+                        color: #999da5;
+
+                        & + li {
+                            margin-top: 20px;
+                        }
+                        
+                    }
+
+                }
+
+                .package {
+                    li {
+                        font-family: 'ralewaymedium', sans-serif;
+                        color: #1d2025;
+                    }
+                }
+
+                .downloads {
+                    li {
+                        color: #76797e;
+                    }
+                }
             }
         }
     }
@@ -389,6 +596,11 @@
                     height: 20px;
                     background-color: transparent;
                     border: none;
+
+                    &:focus {
+                        background-color:transparent;
+                        box-shadow: none;
+                    }
                 }
 
                 .send-message {
@@ -425,8 +637,6 @@
                     padding-top: 25px;
                     resize: none;
                 }
-
-
             }
         }
     }

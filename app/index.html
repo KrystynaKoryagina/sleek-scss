@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="css/jquery.formstyler.css">
     <link rel="stylesheet" href="css/jquery.formstyler.theme.css">
 
+    <!-- Sprite css -->
+    <link rel="stylesheet" href="css/sprite.css">
+    
     <!-- Custom styles -->
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -186,7 +189,7 @@
             <!-- /.page-header-charts-wrap -->
         </div>
         <!-- /.page-header -->
-        <div class="profile-container d-flex flex-wrap">
+        <div class="profile-container d-flex flex-wrap justify-content-between">
             <div class="profile-controls">
                 <div class="card">
                     <div class="profile-tabs">
@@ -538,15 +541,145 @@
             </div>
             <!-- /.profile-controls -->
             <div class="profile-info">
-                <div class="card"></div>
+                <div class="card">
+                    <div class="profile-user-wrapper">
+                        <div class="profile-user-info d-flex flex-column align-items-center">
+                            <div class="user-avatar">
+                                <img src="img/user-avatar.png" alt="">
+                            </div>
+                            <!-- /.user-avatar -->
+                            <div class="profile-user-about d-flex flex-column align-items-center">
+                                <span class="user-name">Druid Wensleydale</span>
+                                <span class="user-profeccion">Freelance Designer, Previously TapQ</span>
+                                <span class="user-address">London,United Kingdom</span>
+                            </div>
+                            <!-- /.profile-user-about -->
+                            <div class="profile-user-btn">
+                                <a href="" class="profile-btn">Follow</a>
+                                <a href="" class="profile-btn">Edit Profile</a>
+                            </div>
+                            <!-- /.profile-user-btn -->
+                        </div>
+                        <!-- /.profile-user-info -->
+                        <div class="profile-user-reviews d-flex justify-content-between align-items-baseline">
+                            <div class="rating">
+                                <ul>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star grey"></i></li>
+                                </ul>
+                                <span class="user-reviews-title">Rating</span>
+                            </div>
+                            <!-- /.rating -->
+                            <div class="revews">
+                                <span class="count">74</span>
+                                <span class="user-reviews-title">Revews</span>
+                            </div>
+                            <!-- /.revews -->
+                            <div class="cuents">
+                                <span class="count">104</span>
+                                <span class="user-reviews-title">Cuents</span>   
+                            </div>
+                            <!-- /.cuents -->
+                            <div class="gigs">
+                                <span class="count">170</span>
+                                <span class="user-reviews-title">Finished gigs</span>
+                            </div>
+                            <!-- /.gigs -->
+                        </div>
+                        <!-- /.profile-user-rating -->
+                        <div class="profile-user-work">
+                            <div class="user-work-item d-flex">
+                                <span class="icon icon-cloud"></span>
+                                <div class="user-work-about d-flex flex-column justify-content-between">
+                                    <span class="user-post">Product Designer</span>
+                                    <span>Air Helper - London, United Kingdom</span>
+                                </div>
+                                <!-- /.user-work-about -->
+                                <span class="user-work-year ml-auto">2016-2017</span>
+                            </div>
+                            <!-- /.user-work-item -->
+                            <div class="user-work-item d-flex">
+                                <span class="icon icon-comments"></span>
+                                <div class="user-work-about d-flex flex-column justify-content-between">
+                                    <span class="user-post">Intern</span>
+                                    <span>Tweet Dock - Berlin, Germany</span>
+                                </div>
+                                <!-- /.user-work-about -->
+                                <span class="user-work-year ml-auto">2016</span>
+                            </div>
+                            <!-- /.user-work-item -->
+                        </div>
+                        <!-- /.profile-user-work -->
+                        <div class="website text-center">
+                            <i class="fas fa-globe"></i>
+                            <span><a href="https://www.decentthemes.com">https://www.decentthemes.com</a></span>
+                        </div>
+                        <!-- /.website -->
+                    </div>
+                    <!-- /.profile-user-wrapper -->
+                </div>
                 <!-- /.card -->
-                <div class="card"></div>
+                <div class="card">
+                    <div class="profile-billing-wrapper">
+                        <div class="billing-plan-info">
+                            <div class="change-billing-plan d-flex justify-content-between align-items-center">
+                                <h6>Billing</h6>
+                                <a href="Change Your Billing Plan">Change Your Billing Plan</a>
+                            </div>
+                            <!-- /.change-billing-plan -->
+                            <div class="bank-card-info d-flex align-items-center">
+                                <span class="icon icon-flag"></span>
+                                <span class="bank-card-number">Ending **** 7436</span>
+                                <span class="bank-card-end ml-auto">06/20</span>
+                                <span class="bank-card-type">Visa</span>
+                            </div>
+                            <!-- /.bank-card-info -->
+                        </div>
+                        <!-- /.billing-plan-info -->
+                        <div class="billing-package-info d-flex justify-content-between align-content-center">
+                            <ul class="package">
+                                <li>Pro Package</li>
+                                <li>Pro Package</li>
+                                <li>Job Posted</li>
+                                <li>Pro Package</li>
+                            </ul>
+                            <!-- /.package -->
+                            <ul class="payment">
+                                <li>Standart Payment</li>
+                                <li>Gift package</li>
+                                <li>28-Days Recuring</li>
+                                <li>Standart Payment</li>
+                            </ul>
+                            <!-- /.payment -->
+                            <ul class="date">
+                                <li>24 Nov 2014</li>
+                                <li>13 July 2017</li>
+                                <li>15 April 2017</li>
+                                <li>17 Sep 2017</li>
+                            </ul>
+                            <!-- /.date -->
+                            <ul class="downloads">
+                                <li><i class="fas fa-cloud-download-alt"></i></li>
+                                <li><i class="fas fa-cloud-download-alt"></i></li>
+                                <li><i class="fas fa-cloud-download-alt"></i></li>
+                                <li><i class="fas fa-cloud-download-alt"></i></li>
+                            </ul>
+                            <!-- /.downloads -->
+                        </div>
+                        <!-- /.billing-package-info -->
+                    </div>
+                    <!-- /.profile-billing-wrapper -->
+                </div>
                 <!-- /.card -->
             </div>
             <!-- /.profile-info -->
         </div>
         <!-- /.profile-container -->
         <div id="footer" class="mt-auto">
+            <span class="copy">Copyright © 2017 Design By <a href="#">Nijam Ali</a></span>
         </div>
         <!-- /#footer -->
     </main>
