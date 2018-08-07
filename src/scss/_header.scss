@@ -10,6 +10,12 @@
     &.header-login {
         padding-left: 39px;
 
+        @media(max-width: 576px) {
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 10px;
+        }
+
         .menu-btn {
             margin-left: 75px;
             margin-right: 20px;
@@ -18,6 +24,30 @@
         .header-content {
             width: 100%;
             border-left: $headerBorder;
+
+            @media(max-width: 991px) {
+                flex-direction: column;
+            }
+
+            @media(max-width: 576px) {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            form {
+                @media(max-width: 991px) {
+                    order: 1;
+                }
+            }
+
+            .user-controls {
+
+                @media(max-width: 991px) {
+                    margin-left: 0;
+                    margin-bottom: 30px;
+                }
+
+            }
         }
     }
 
@@ -26,9 +56,10 @@
         
         form {
             label {
-                font-family: 'ralewayregular', sans-serif;
+                font-family: $basicFontFamily;
                 font-size: .875rem;
                 color: #9da0a4;
+                margin-bottom: 0;
             }
         }
 
@@ -46,8 +77,8 @@
 
                     .dropdown-controls {
                         position: relative;
-                        width: $dropdownWidth;
-                        height: $dropdownHeight;
+                        width: 40px;
+                        height: 40px;
                         font-size: .875rem;
                         color: #91969f;
                         background-color: $dropdownBg;
@@ -58,8 +89,8 @@
                             position: absolute;
                             top: -5px;
                             right: -5px;
-                            width: $notifyWidth;
-                            height: $notifyHeigth;
+                            width: 19px;
+                            height: 19px;
                             font-size: .8125rem;
                             color: #fff;
                             text-align: center;
@@ -83,4 +114,5 @@
         }
 
     }
+
 }

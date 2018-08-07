@@ -7,6 +7,11 @@
         padding: 35px 40px;
         border-bottom: $authBorder;
 
+        @media(max-width: 576px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
         .auth-head-title {
             margin-bottom: 5px;
             font-family: 'ralewaymedium', sans-serif;
@@ -20,6 +25,12 @@
         }
 
         .form-display-controls {
+
+            @media(max-width: 576px) {
+                margin-left: 0;
+                margin-top: 10px;
+            }
+
             li {
                 .display-control-btn {
                     @extend %btn;
@@ -69,6 +80,11 @@
         .checkbox-group {
             margin: 25px 0;
 
+            @media(max-width: 576px) {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
             label {
                 font-size: .875rem;
                 color: #5d6066;
@@ -80,7 +96,23 @@
 
             a {
                 font-size: .875rem;
-                color: $basicBlue;
+                color: $basicBlue; 
+
+                @media(max-width:576px) {
+                    margin-left: 0;
+                }
+            }
+        }
+
+        .form-footer {
+            @media(max-width: 576px) {
+                flex-direction: column;
+                align-items: flex-start;
+
+                .social {
+                    margin-left: 0;
+                    margin-top: 10px;
+                }
             }
         }
     }

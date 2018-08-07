@@ -3,26 +3,44 @@
     background-color: #f2f4f7;
 }
 
-#aside {
+%aside {
     @include fixed-to-top();
-    max-width: $asideWidth;
     width: 100%;
     height: 100vh;
     z-index: 99;
     background-color: $asideBg;
     box-shadow: 0 0 15px rgba(0, 0, 0, .06);
+}
+
+#aside {
+    @extend %aside;
+    // @include fixed-to-top();
+    max-width: $asideWidth;
+    // width: 100%;
+    // height: 100vh;
+    // z-index: 99;
+    // background-color: $asideBg;
+    // box-shadow: 0 0 15px rgba(0, 0, 0, .06);
+
+    @media(max-width: 1200px) {
+        max-width: $mobileAsideWidth;
+    }
 
     .aside-head {
         padding: 15px 20px 15px 40px;
         border-bottom: 1px solid #e5e8ee;
+
+        @media (max-width: 1200px) {
+            padding: 35px 5px 35px 5px;
+            text-align: center;
+        }
     }
 
     .menu-wrapper {
         height: calc(100vh - 93px);
         padding-top: 45px;
         padding-bottom: 30px;
-        // overflow-y: auto;
-
+    
         .menu-title {
             margin-left: 40px;
             margin-bottom: 35px;
@@ -62,9 +80,57 @@
             border: 1px solid #eef0f4;
             border-radius: 2px;
         }
-
+    
     }
+
+    
 }
+
+// #mobile-aside {
+//     @extend %aside;
+//     max-width: $mobileAsideWidth;
+//     display: none;
+
+//     @media (max-width: 1200px) {
+//         display: block;
+//     }
+
+//     .aside-head {
+//         padding: 35px 5px 35px 5px;
+//         text-align: center;
+//         border-bottom: 1px solid #e5e8ee;
+
+//         .menu-btn {
+//             display: inline-block;
+//         }
+//     }
+
+//     .menu-wrapper {
+//         .menu-title {
+//             margin-left: 0;
+//             text-align: center;
+//         }
+
+//         .aside-nav {
+            
+//             a {
+//                 padding-left: 15px;
+//                 text-align: center;
+
+//                 i {
+//                     margin-right: 0;
+//                 }
+//             }
+//         }
+
+//         .scrollbar-inner > .scroll-element.scroll-y {
+//             right: 0;
+//         }
+//     }
+// }
+
+
+
 
 .menu-btn {
     cursor: pointer;

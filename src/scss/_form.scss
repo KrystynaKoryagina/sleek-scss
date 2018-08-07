@@ -7,11 +7,11 @@ label {
 }
 
 .search-input {
-    max-width: $searchInputWidth;
+    min-width: $searchInputWidth;
     width: 100%;
     height: 15px;
     margin-left: 14px;
-    font-family: 'ralewayregular', sans-serif;
+    font-family: $basicFontFamily;
     font-size: .875rem;
     color: #9da0a4;
 
@@ -25,7 +25,7 @@ label {
     width: 100%;
     height: 64px;
     padding: 0 30px;
-    font-family: 'ralewayregular', sans-serif;
+    font-family: $basicFontFamily;;
     font-size: .875rem;
     color: #9da0a4;
     background-color: $basicGrey;

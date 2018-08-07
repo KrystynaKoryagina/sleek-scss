@@ -1230,7 +1230,7 @@ button:hover, button:active, button:focus {
 .text-center {
   text-align: center; }
 
-.submit-btn, .auth-container .auth-head .form-display-controls li .display-control-btn, .profile-container .profile-info .profile-user-wrapper .profile-user-info .profile-user-btn .profile-btn {
+.submit-btn, .auth-container .auth-head .form-display-controls li .display-control-btn, .profile-container .profile-info .profile-user-wrapper .profile-user-info .profile-btn-wrapper .profile-btn {
   display: inline-block;
   font-size: .75rem;
   line-height: 1em;
@@ -1292,11 +1292,11 @@ label {
   color: #1d2025; }
 
 .search-input {
-  max-width: 200px;
+  min-width: 200px;
   width: 100%;
   height: 15px;
   margin-left: 14px;
-  font-family: 'ralewayregular', sans-serif;
+  font-family: "ralewayregular", sans-serif;
   font-size: .875rem;
   color: #9da0a4; }
   .search-input::-webkit-input-placeholder {
@@ -1312,7 +1312,7 @@ label {
   width: 100%;
   height: 64px;
   padding: 0 30px;
-  font-family: 'ralewayregular', sans-serif;
+  font-family: "ralewayregular", sans-serif;
   font-size: .875rem;
   color: #9da0a4;
   background-color: #f9f9f9;
@@ -1384,18 +1384,54 @@ label {
           box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); }
   #header.header-login {
     padding-left: 39px; }
+    @media (max-width: 576px) {
+      #header.header-login {
+        -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+        -webkit-box-pack: justify;
+        -webkit-justify-content: space-between;
+           -moz-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        padding: 10px; } }
     #header.header-login .menu-btn {
       margin-left: 75px;
       margin-right: 20px; }
     #header.header-login .header-content {
       width: 100%;
       border-left: 1px solid #e5e8ee; }
+      @media (max-width: 991px) {
+        #header.header-login .header-content {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: column;
+             -moz-box-orient: vertical;
+             -moz-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column; } }
+      @media (max-width: 576px) {
+        #header.header-login .header-content {
+          padding-left: 10px;
+          padding-right: 10px; } }
+      @media (max-width: 991px) {
+        #header.header-login .header-content form {
+          -webkit-box-ordinal-group: 2;
+          -webkit-order: 1;
+             -moz-box-ordinal-group: 2;
+              -ms-flex-order: 1;
+                  order: 1; } }
+      @media (max-width: 991px) {
+        #header.header-login .header-content .user-controls {
+          margin-left: 0;
+          margin-bottom: 30px; } }
   #header .header-content {
     padding: 19px 39px; }
     #header .header-content form label {
-      font-family: 'ralewayregular', sans-serif;
+      font-family: "ralewayregular", sans-serif;
       font-size: .875rem;
-      color: #9da0a4; }
+      color: #9da0a4;
+      margin-bottom: 0; }
     #header .header-content .user-controls .dropdown-items-wrap {
       padding: 5px 30px;
       border-left: 1px solid #e5e8ee;
@@ -1444,7 +1480,6 @@ label {
   position: fixed;
   top: 0;
   left: 0;
-  max-width: 290px;
   width: 100%;
   height: 100vh;
   z-index: 99;
@@ -1452,9 +1487,19 @@ label {
   -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.06);
      -moz-box-shadow: 0 0 15px rgba(0, 0, 0, 0.06);
           box-shadow: 0 0 15px rgba(0, 0, 0, 0.06); }
+
+#aside {
+  max-width: 290px; }
+  @media (max-width: 1200px) {
+    #aside {
+      max-width: 70px; } }
   #aside .aside-head {
     padding: 15px 20px 15px 40px;
     border-bottom: 1px solid #e5e8ee; }
+    @media (max-width: 1200px) {
+      #aside .aside-head {
+        padding: 35px 5px 35px 5px;
+        text-align: center; } }
   #aside .menu-wrapper {
     height: -webkit-calc(100vh - 93px);
     height: -moz-calc(100vh - 93px);
@@ -1510,10 +1555,20 @@ label {
           box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06); }
 
 #main {
-  padding-top: 93px; }
-
-#main.profile {
-  padding-left: 290px; }
+  padding-top: 93px;
+  height: 100vh; }
+  #main.profile {
+    padding-left: 290px;
+    min-height: 1000px;
+    overflow-y: auto; }
+  #main.login {
+    padding-left: 10px;
+    padding-right: 10px; }
+    @media (max-width: 991px) {
+      #main.login {
+        height: auto;
+        padding-top: 230px;
+        padding-bottom: 50px; } }
 
 #footer {
   padding: 25px 40px;
@@ -1620,6 +1675,20 @@ label {
   .auth-container .auth-head {
     padding: 35px 40px;
     border-bottom: 1px solid #eceff3; }
+    @media (max-width: 576px) {
+      .auth-container .auth-head {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+           -moz-box-orient: vertical;
+           -moz-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: start;
+        -webkit-align-items: flex-start;
+           -moz-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start; } }
     .auth-container .auth-head .auth-head-title {
       margin-bottom: 5px;
       font-family: 'ralewaymedium', sans-serif;
@@ -1628,6 +1697,10 @@ label {
     .auth-container .auth-head .auth-head-subtitle {
       font-size: 1.125rem;
       color: #999da5; }
+    @media (max-width: 576px) {
+      .auth-container .auth-head .form-display-controls {
+        margin-left: 0;
+        margin-top: 10px; } }
     .auth-container .auth-head .form-display-controls li .display-control-btn {
       padding: 20px;
       font-family: 'ralewaymedium', sans-serif;
@@ -1659,6 +1732,20 @@ label {
       margin-top: 18px; }
     .auth-container .auth-body .checkbox-group {
       margin: 25px 0; }
+      @media (max-width: 576px) {
+        .auth-container .auth-body .checkbox-group {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -webkit-flex-direction: column;
+             -moz-box-orient: vertical;
+             -moz-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
+          -webkit-box-align: start;
+          -webkit-align-items: flex-start;
+             -moz-box-align: start;
+              -ms-flex-align: start;
+                  align-items: flex-start; } }
       .auth-container .auth-body .checkbox-group label {
         font-size: .875rem;
         color: #5d6066; }
@@ -1667,6 +1754,26 @@ label {
       .auth-container .auth-body .checkbox-group a {
         font-size: .875rem;
         color: #1585ff; }
+        @media (max-width: 576px) {
+          .auth-container .auth-body .checkbox-group a {
+            margin-left: 0; } }
+    @media (max-width: 576px) {
+      .auth-container .auth-body .form-footer {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+           -moz-box-orient: vertical;
+           -moz-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: start;
+        -webkit-align-items: flex-start;
+           -moz-box-align: start;
+            -ms-flex-align: start;
+                align-items: flex-start; }
+        .auth-container .auth-body .form-footer .social {
+          margin-left: 0;
+          margin-top: 10px; } }
 
 .profile-container {
   padding: 50px 40px 80px;
@@ -1737,7 +1844,22 @@ label {
             color: #1d2025; }
           .profile-container .profile-info .profile-user-wrapper .profile-user-info .profile-user-about .user-address {
             color: #999da5; }
-        .profile-container .profile-info .profile-user-wrapper .profile-user-info .profile-user-btn .profile-btn {
+        @media (max-width: 1356px) {
+          .profile-container .profile-info .profile-user-wrapper .profile-user-info .profile-btn-wrapper {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-flex-wrap: wrap;
+                -ms-flex-wrap: wrap;
+                    flex-wrap: wrap;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+               -moz-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center; } }
+        .profile-container .profile-info .profile-user-wrapper .profile-user-info .profile-btn-wrapper .profile-btn {
           min-width: 170px;
           padding: 20px 45px;
           font-family: 'ralewayregular', sans-serif;
@@ -1753,12 +1875,16 @@ label {
           -o-transition: all .2s ease-in;
           -moz-transition: all .2s ease-in;
           transition: all .2s ease-in; }
-          .profile-container .profile-info .profile-user-wrapper .profile-user-info .profile-user-btn .profile-btn:hover {
+          .profile-container .profile-info .profile-user-wrapper .profile-user-info .profile-btn-wrapper .profile-btn:hover {
             color: #fff;
             background-color: #1585ff;
             border-color: #1585ff; }
-          .profile-container .profile-info .profile-user-wrapper .profile-user-info .profile-user-btn .profile-btn + .profile-btn {
+          .profile-container .profile-info .profile-user-wrapper .profile-user-info .profile-btn-wrapper .profile-btn + .profile-btn {
             margin-left: 20px; }
+            @media (max-width: 1356px) {
+              .profile-container .profile-info .profile-user-wrapper .profile-user-info .profile-btn-wrapper .profile-btn + .profile-btn {
+                margin-left: 0;
+                margin-top: 15px; } }
       .profile-container .profile-info .profile-user-wrapper .profile-user-reviews {
         padding-top: 20px;
         padding-bottom: 20px;
@@ -1786,6 +1912,11 @@ label {
         .profile-container .profile-info .profile-user-wrapper .profile-user-work .user-work-item {
           font-size: .875rem;
           color: #999da5; }
+          @media (max-width: 1356px) {
+            .profile-container .profile-info .profile-user-wrapper .profile-user-work .user-work-item {
+              -webkit-flex-wrap: wrap;
+                  -ms-flex-wrap: wrap;
+                      flex-wrap: wrap; } }
           .profile-container .profile-info .profile-user-wrapper .profile-user-work .user-work-item + .user-work-item {
             margin-top: 35px; }
           .profile-container .profile-info .profile-user-wrapper .profile-user-work .user-work-item .user-work-about {
@@ -1793,6 +1924,10 @@ label {
             .profile-container .profile-info .profile-user-wrapper .profile-user-work .user-work-item .user-work-about .user-post {
               font-family: 'ralewaymedium', sans-serif;
               color: #1d2025; }
+          @media (max-width: 1356px) {
+            .profile-container .profile-info .profile-user-wrapper .profile-user-work .user-work-item .user-work-year {
+              margin-left: 56px;
+              margin-top: 5px; } }
       .profile-container .profile-info .profile-user-wrapper .website {
         padding-top: 25px;
         padding-bottom: 25px;
@@ -1853,10 +1988,13 @@ label {
     border-top-color: #1585ff;
     background-color: #f2f4f7; }
 
+.profile-tabs .ui-tabs-panel {
+  max-height: 970px; }
+
 .profile-tabs .activity-wrapper {
   padding: 30px 0 30px 40px; }
   .profile-tabs .activity-wrapper .scroll-wrapper {
-    height: 967px; }
+    height: 912px; }
   .profile-tabs .activity-wrapper .activity-day + .activity-day {
     margin-top: 50px; }
   .profile-tabs .activity-wrapper .activity-day h3 {
@@ -1867,7 +2005,7 @@ label {
     text-transform: uppercase; }
   .profile-tabs .activity-wrapper .activity-day .activity-item {
     position: relative;
-    padding-bottom: 38px; }
+    padding-bottom: 34px; }
     .profile-tabs .activity-wrapper .activity-day .activity-item::before {
       content: "";
       position: absolute;
@@ -1934,9 +2072,12 @@ label {
     width: 360px;
     height: 430px; }
   .profile-tabs .profile-wrapper .about-user .user-info {
-    max-width: 55%;
+    max-width: 50%;
     font-size: .875rem;
     color: #76797e; }
+    @media (max-width: 1919px) {
+      .profile-tabs .profile-wrapper .about-user .user-info {
+        margin-left: 50px; } }
     .profile-tabs .profile-wrapper .about-user .user-info .user-info-item {
       min-width: 50%;
       margin-top: 10px; }
@@ -1946,7 +2087,6 @@ label {
         font-size: .875rem;
         color: #1d2025; }
       .profile-tabs .profile-wrapper .about-user .user-info .user-info-item p {
-        margin-top: 18px;
         color: #999da5;
         line-height: 1.71em; }
   .profile-tabs .profile-wrapper .skills-wrapper {
@@ -1999,6 +2139,9 @@ label {
     .profile-tabs .messages-wrapper .message-item .message p {
       margin-top: 10px;
       line-height: 2.40em; }
+      @media (max-width: 1356px) {
+        .profile-tabs .messages-wrapper .message-item .message p {
+          line-height: 1.5em; } }
   .profile-tabs .messages-wrapper .message-item.to .message {
     padding-left: 25px;
     padding-right: 40px;
@@ -2052,7 +2195,6 @@ label {
        -moz-border-radius: 2px;
             border-radius: 2px; }
     .profile-tabs .messages-wrapper .write-message .download-img {
-      margin-right: 18px;
       font-size: 1.125rem;
       color: #1585ff; }
     .profile-tabs .messages-wrapper .write-message form {
@@ -2063,7 +2205,6 @@ label {
            -moz-box-flex: 1;
             -ms-flex-positive: 1;
                 flex-grow: 1;
-        height: 20px;
         background-color: transparent;
         border: none; }
         .profile-tabs .messages-wrapper .write-message form .form-control:focus {
@@ -2072,7 +2213,7 @@ label {
              -moz-box-shadow: none;
                   box-shadow: none; }
       .profile-tabs .messages-wrapper .write-message form .send-message {
-        padding: 25px 38px;
+        padding: 20px 38px;
         -webkit-border-radius: 3px;
            -moz-border-radius: 3px;
                 border-radius: 3px;

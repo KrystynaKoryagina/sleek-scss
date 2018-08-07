@@ -1,9 +1,22 @@
 #main {
-    // height: 100vh;
     padding-top: 93px;
+    height: 100vh;
+
+    &.profile {
+        padding-left: $asideWidth;
+        min-height: 1000px;
+        overflow-y: auto;
+    }
+
+    &.login {
+        padding-left: 10px;
+        padding-right: 10px;
+
+        @media (max-width: 991px) {
+            height: auto;
+            padding-top: 230px;
+            padding-bottom: 50px;
+        }
+    }
 }
 
-#main.profile {
-    padding-left: $asideWidth;
-    // min-height: 700px;
-}
