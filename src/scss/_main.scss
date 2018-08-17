@@ -6,6 +6,10 @@
         padding-left: $asideWidth;
         min-height: 1000px;
         overflow-y: auto;
+
+        @media(max-width: 1200px) {
+            padding-left: 0;
+        }
     }
 
     &.login {

@@ -7,6 +7,19 @@
     border: 1px solid transparent;
 }
 
+%menu-btn {
+    cursor: pointer;
+    span {
+        display: block;
+        height: 2px;
+        background-color: $menuBtnBg;
+        
+        & + span {
+            margin-top: 6px;
+        }
+    }
+}
+
 .submit-btn {
     @extend %btn;
     position: relative;

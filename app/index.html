@@ -22,6 +22,11 @@
 <body>
     <header id="header">
         <div class="header-content d-flex align-items-center">
+            <div class="menu-btn">
+                <span style="width: 30px"></span>
+                <span style="width: 16px"></span>
+                <span style="width: 22px"></span>
+            </div>
             <form class="d-flex align-items-center">
                 <label for="search-input"><i class="fas fa-search"></i></label>
                 <input type="text" class="search-input" name="search-input" id="search-input" placeholder="Search...">
@@ -65,7 +70,7 @@
                 </a>
             </div>
             <!-- /.logo -->
-            <div class="menu-btn ml-auto">
+            <div class="menu-btn-close ml-auto">
                 <span style="width: 30px"></span>
                 <span style="width: 16px"></span>
                 <span style="width: 22px"></span>
@@ -95,47 +100,15 @@
     </aside>
     <!-- /#aside -->
 
-    <!-- <aside id="mobile-aside">
-        <div class="aside-head">
-            <div class="menu-btn">
-                <span style="width: 30px"></span>
-                <span style="width: 16px"></span>
-                <span style="width: 22px"></span>
-            </div>
-
-        </div>
-
-        <div class="menu-wrapper d-flex flex-column">
-            <h6 class="menu-title">Menu</h6>
-            <nav class="aside-nav scrollbar-inner">
-                <a href="#"><i class="fas fa-home"></i></a>
-                <a href="#"><i class="fas fa-chart-bar"></i></a>
-                <a href="#" class="active"><i class="fas fa-user"></i></a>
-                <a href="#"><i class="fas fa-money-check"></i></a>
-                <a href="#"><i class="fas fa-briefcase"></i></a>
-                <a href="#"><i class="fas fa-sitemap"></i></a>
-                <a href="#"><i class="fas fa-envelope"></i></a>
-                <a href="#"><i class="far fa-life-ring"></i></a>
-            </nav>
-
-            <a href="" class="settings-btn mt-auto mx-auto">
-                <i class="fas fa-cog"></i>
-            </a>
-
-        </div>
-
-    </aside> -->
-
-
     <main id="main" class="profile d-flex flex-column">
         <div class="scrollbar-inner">
-            <div class="page-header d-flex align-items-center bg-white">
+            <div class="page-header d-flex flex-wrap align-items-center bg-white">
                 <div class="page-header-info">
                     <h3 class="page-title">Your profile</h3>
                     <span class="page-subtitle">Home | Profile</span>
                 </div>
                 <!-- /.page-header-info -->
-                <div class="page-header-charts-wrap d-flex align-items-center ml-auto">
+                <div class="page-header-charts-wrap d-flex flex-wrap justify-content-between align-items-center ml-auto">
                     <div class="page-header-chart d-flex align-items-center">
                         <div class="chart-info">
                             <span class="chart-name">My income</span>
@@ -226,7 +199,7 @@
                 <div class="profile-controls">
                     <div class="card">
                         <div class="profile-tabs">
-                            <ul class="tab-controls d-flex">
+                            <ul class="tab-controls d-flex flex-wrap">
                                 <li>
                                     <a href="#activity">Activity</a>
                                 </li>
@@ -287,7 +260,7 @@
                                             <!-- /.activity-marker -->
                                             <div class="activity-item-content">
                                                 <p>Gerald Vaughn attached 6 files to <span>9054 - Find good stocks for our Instagram channel</span></p>
-                                                <div class="loaded-img">
+                                                <div class="loaded-img d-flex flex-wrap">
                                                     <img src="img/load-img.png" alt="">
                                                     <img src="img/load-img.png" alt="">
                                                     <img src="img/load-img.png" alt="">
@@ -367,203 +340,212 @@
                             </div>
                             <!-- /.activity-wrapper -->
                             <div id="profile" class="profile-wrapper">
-                                <div class="about-user d-flex">
-                                    <div class="user-photo">
-                                        <img src="img/user-photo.jpg" alt="">
+                                <div class="scrollbar-inner">
+                                    <div class="about-user d-flex">
+                                        <div class="user-photo">
+                                            <img src="img/user-photo.jpg" alt="">
+                                        </div>
+                                        <!-- /.user-photo -->
+                                        <div class="user-info d-flex flex-wrap ml-auto">
+                                            <div class="user-info-item">
+                                                <h3 class="user-info-title">Full Name</h3>
+                                                <span>Wisteria Ravenclaw</span>
+                                            </div>
+                                            <!-- /.user-info-item -->
+                                            <div class="user-info-item">
+                                                <h3 class="user-info-title">Email</h3>
+                                                <span><a href="mailto:wisteria@support.com">wisteria@support.com</a></span>
+                                            </div>
+                                            <!-- /.user-info-item -->
+                                            <div class="user-info-item">
+                                                <h3 class="user-info-title">Mobile</h3>
+                                                <span><a tel="+964431745542">(+964) 431 745 542</a></span>
+                                            </div>
+                                            <!-- /.user-info-item -->
+                                            <div class="user-info-item">
+                                                <h3 class="user-info-title">Address</h3>
+                                                <span>London, United Kingdom</span>
+                                            </div>
+                                            <!-- /.user-info-item -->
+                                            <div class="user-info-item">
+                                                <h3 class="user-info-title">About me</h3>
+                                                <p>Hi, adipisci sagittis, felis arcu dignissimos exercitationem nascetur qui accusantium inceptos fugit eos aliqua hymenaeos quae pariatur consectetuer penatibus illo ornare vehicula dolorum saepe eligendi? Facilis laborum. Amet voluptatum fusce faucibus habitant. Dolor ut labore mollitia ea? Fusce ducimus explicabo sagittis itaque fermentum, ab irure pariatur hac, magnis massa, illo, quas dictum totam molestias ut platea, eiusmod! Habitant laoreet! Quaerat sit malesuada provident laudantium, incidunt! Rerum inventore dolore, optio netus corporis. Exercitation consequatur, veniam illum placeat mollit ante congue maiores lobortis! Ante blanditiis amet proident sit justo fuga.</p>
+                                            </div>
+                                            <!-- /.user-info-item -->
+                                        </div>
+                                        <!-- /.user-info -->
                                     </div>
-                                    <!-- /.user-photo -->
-                                    <div class="user-info d-flex flex-wrap ml-auto">
-                                        <div class="user-info-item">
-                                            <h3 class="user-info-title">Full Name</h3>
-                                            <span>Wisteria Ravenclaw</span>
+                                    <!-- /.about-user -->
+                                    <div class="skills-wrapper">
+                                        <div class="skills-title">
+                                            <h3>Skill Set</h3>
                                         </div>
-                                        <!-- /.user-info-item -->
-                                        <div class="user-info-item">
-                                            <h3 class="user-info-title">Email</h3>
-                                            <span><a href="mailto:wisteria@support.com">wisteria@support.com</a></span>
+                                        <!-- /.skills-title -->
+                                        <span class="subtitle">Sequi primis quisquam iure elit euismod purus impedit dolor lorem.</span>
+        
+                                        <div class="user-skills">
+                                            <div class="skill-item">
+                                                <span class="skill-name">Web Design</span>
+                                                <div class="progress-bar blue">
+                                                    <div class="progress progress-blue" style="width: 80%">
+                                                        <span>80%</span>
+                                                    </div>
+                                                </div>
+                                                <!-- /.progress-bar -->
+                                            </div>
+                                            <!-- /.skill-item -->
+                                            <div class="skill-item">
+                                                <span class="skill-name">Photoshop</span>
+                                                <div class="progress-bar red">
+                                                    <div class="progress progress-red" style="width: 95%">
+                                                        <span>95%</span>
+                                                    </div>
+                                                </div>
+                                                <!-- /.progress-bar -->
+                                            </div>
+                                            <!-- /.skill-item -->
+                                            <div class="skill-item">
+                                                <span class="skill-name">jQuery</span>
+                                                <div class="progress-bar aqua">
+                                                    <div class="progress progress-aqua" style="width: 75%">
+                                                        <span>75%</span>
+                                                    </div>
+                                                </div>
+                                                <!-- /.progress-bar -->
+                                            </div>
+                                            <!-- /.skill-item -->
+                                            <div class="skill-item">
+                                                <span class="skill-name">Wordpress</span>
+                                                <div class="progress-bar green">
+                                                    <div class="progress progress-green" style="width: 85%">
+                                                        <span>85%</span>
+                                                    </div>
+                                                </div>
+                                                <!-- /.progress-bar -->
+                                            </div>
+                                            <!-- /.skill-item -->
                                         </div>
-                                        <!-- /.user-info-item -->
-                                        <div class="user-info-item">
-                                            <h3 class="user-info-title">Mobile</h3>
-                                            <span><a tel="+964431745542">(+964) 431 745 542</a></span>
-                                        </div>
-                                        <!-- /.user-info-item -->
-                                        <div class="user-info-item">
-                                            <h3 class="user-info-title">Address</h3>
-                                            <span>London, United Kingdom</span>
-                                        </div>
-                                        <!-- /.user-info-item -->
-                                        <div class="user-info-item">
-                                            <h3 class="user-info-title">About me</h3>
-                                            <p>Hi, adipisci sagittis, felis arcu dignissimos exercitationem nascetur qui accusantium inceptos fugit eos aliqua hymenaeos quae pariatur consectetuer penatibus illo ornare vehicula dolorum saepe eligendi? Facilis laborum. Amet voluptatum fusce faucibus habitant. Dolor ut labore mollitia ea? Fusce ducimus explicabo sagittis itaque fermentum, ab irure pariatur hac, magnis massa, illo, quas dictum totam molestias ut platea, eiusmod! Habitant laoreet! Quaerat sit malesuada provident laudantium, incidunt! Rerum inventore dolore, optio netus corporis. Exercitation consequatur, veniam illum placeat mollit ante congue maiores lobortis! Ante blanditiis amet proident sit justo fuga.</p>
-                                        </div>
-                                        <!-- /.user-info-item -->
+                                        <!-- /.user-skills -->
                                     </div>
-                                    <!-- /.user-info -->
+                                    <!-- /.skills-wrapper -->
                                 </div>
-                                <!-- /.about-user -->
-                                <div class="skills-wrapper">
-                                    <div class="skills-title">
-                                        <h3>Skill Set</h3>
-                                    </div>
-                                    <!-- /.skills-title -->
-                                    <span class="subtitle">Sequi primis quisquam iure elit euismod purus impedit dolor lorem.</span>
-    
-                                    <div class="user-skills">
-                                        <div class="skill-item">
-                                            <span class="skill-name">Web Design</span>
-                                            <div class="progress-bar blue">
-                                                <div class="progress progress-blue" style="width: 80%">
-                                                    <span>80%</span>
-                                                </div>
-                                            </div>
-                                            <!-- /.progress-bar -->
-                                        </div>
-                                        <!-- /.skill-item -->
-                                        <div class="skill-item">
-                                            <span class="skill-name">Photoshop</span>
-                                            <div class="progress-bar red">
-                                                <div class="progress progress-red" style="width: 95%">
-                                                    <span>95%</span>
-                                                </div>
-                                            </div>
-                                            <!-- /.progress-bar -->
-                                        </div>
-                                        <!-- /.skill-item -->
-                                        <div class="skill-item">
-                                            <span class="skill-name">jQuery</span>
-                                            <div class="progress-bar aqua">
-                                                <div class="progress progress-aqua" style="width: 75%">
-                                                    <span>75%</span>
-                                                </div>
-                                            </div>
-                                            <!-- /.progress-bar -->
-                                        </div>
-                                        <!-- /.skill-item -->
-                                        <div class="skill-item">
-                                            <span class="skill-name">Wordpress</span>
-                                            <div class="progress-bar green">
-                                                <div class="progress progress-green" style="width: 85%">
-                                                    <span>85%</span>
-                                                </div>
-                                            </div>
-                                            <!-- /.progress-bar -->
-                                        </div>
-                                        <!-- /.skill-item -->
-                                    </div>
-                                    <!-- /.user-skills -->
-                                </div>
-                                <!-- /.skills-wrapper -->
+                                <!-- /.scrollbar-inner -->
                             </div>
                             <!-- /.profile-wrapper -->
                             <div class="messages-wrapper d-flex flex-column" id="messages">
-                                <div class="message-item to d-flex">
+                                <div class="scrollbar-inner">
+                                    <div class="message-item to d-flex">
+                                            <img class="messanger-avatar mb-auto" src="img/messanger-avatar.png" alt="">
+                                            <div class="message mr-auto">
+                                                <span class="message-info"><span>Lurch Schpellchek</span> | 4 minutes ago</span>
+                                                <p>Adipisci sagittis, felis arcu dignissimos exercitationem nascetur qui accusantium inceptos fugit eos aliqua hymenaeos quae pariatur consectetuer quae penatibus illo ornare vehicula dolorum saepe eligendi? Facilis laborum.</p>
+                                            </div>
+                                            <!-- /.message -->
+                                    </div>
+                                    <!-- /.message-item -->
+                                    <div class="message-item from d-flex">
+                                        <div class="message ml-auto">
+                                            <span class="message-info"><span>Phillip Anthropy</span> | 5 minutes ago</span>
+                                            <p>Adipisci sagittis, felis quae arcu dignissimos exercitationem nascetur qui accusantium inceptos fugit eos aliqua hymenaeos quae pariatur consectetuer penatibus illo ornare vehicula dolorum saepe eligendi? Facilis laborum.</p>
+                                        </div>
+                                        <!-- /.message -->
+                                        <img class="messanger-avatar mb-auto" src="img/messanger-avatar.png" alt="">
+                                    </div>
+                                    <!-- /.message-item -->
+                                    <div class="message-item to d-flex">
                                         <img class="messanger-avatar mb-auto" src="img/messanger-avatar.png" alt="">
                                         <div class="message mr-auto">
                                             <span class="message-info"><span>Lurch Schpellchek</span> | 4 minutes ago</span>
                                             <p>Adipisci sagittis, felis arcu dignissimos exercitationem nascetur qui accusantium inceptos fugit eos aliqua hymenaeos quae pariatur consectetuer quae penatibus illo ornare vehicula dolorum saepe eligendi? Facilis laborum.</p>
                                         </div>
                                         <!-- /.message -->
-                                </div>
-                                <!-- /.message-item -->
-                                <div class="message-item from d-flex">
-                                    <div class="message ml-auto">
-                                        <span class="message-info"><span>Phillip Anthropy</span> | 5 minutes ago</span>
-                                        <p>Adipisci sagittis, felis quae arcu dignissimos exercitationem nascetur qui accusantium inceptos fugit eos aliqua hymenaeos quae pariatur consectetuer penatibus illo ornare vehicula dolorum saepe eligendi? Facilis laborum.</p>
                                     </div>
-                                    <!-- /.message -->
-                                    <img class="messanger-avatar mb-auto" src="img/messanger-avatar.png" alt="">
-                                </div>
-                                <!-- /.message-item -->
-                                <div class="message-item to d-flex">
-                                    <img class="messanger-avatar mb-auto" src="img/messanger-avatar.png" alt="">
-                                    <div class="message mr-auto">
-                                        <span class="message-info"><span>Lurch Schpellchek</span> | 4 minutes ago</span>
-                                        <p>Adipisci sagittis, felis arcu dignissimos exercitationem nascetur qui accusantium inceptos fugit eos aliqua hymenaeos quae pariatur consectetuer quae penatibus illo ornare vehicula dolorum saepe eligendi? Facilis laborum.</p>
+                                    <!-- /.message-item -->
+                                    <div class="message-item from d-flex">
+                                        <div class="message ml-auto">
+                                            <span class="message-info"><span>Phillip Anthropy</span> | 5 minutes ago</span>
+                                            <p>Adipisci sagittis, felis quae arcu dignissimos exercitationem nascetur qui accusantium inceptos fugit eos aliqua hymenaeos quae pariatur consectetuer penatibus illo ornare vehicula dolorum saepe eligendi? Facilis laborum.</p>
+                                        </div>
+                                        <!-- /.message -->
+                                        <img class="messanger-avatar mb-auto" src="img/messanger-avatar.png" alt="">
                                     </div>
-                                    <!-- /.message -->
-                                </div>
-                                <!-- /.message-item -->
-                                <div class="message-item from d-flex">
-                                    <div class="message ml-auto">
-                                        <span class="message-info"><span>Phillip Anthropy</span> | 5 minutes ago</span>
-                                        <p>Adipisci sagittis, felis quae arcu dignissimos exercitationem nascetur qui accusantium inceptos fugit eos aliqua hymenaeos quae pariatur consectetuer penatibus illo ornare vehicula dolorum saepe eligendi? Facilis laborum.</p>
+                                    <!-- /.message-item -->
+                                    <div class="message-item from d-flex">
+                                        <div class="message ml-auto">
+                                            <span class="message-info"><span>Phillip Anthropy</span> | 7 minutes ago</span>
+                                            <p>Adipisci sagittis, felis quae arcu dignissimos exercitationem nascetur qui accusantium inceptos.</p>
+                                        </div>
+                                        <!-- /.message -->
+                                        <img class="messanger-avatar mb-auto" src="img/messanger-avatar.png" alt="">
                                     </div>
-                                    <!-- /.message -->
-                                    <img class="messanger-avatar mb-auto" src="img/messanger-avatar.png" alt="">
-                                </div>
-                                <!-- /.message-item -->
-                                <div class="message-item from d-flex">
-                                    <div class="message ml-auto">
-                                        <span class="message-info"><span>Phillip Anthropy</span> | 7 minutes ago</span>
-                                        <p>Adipisci sagittis, felis quae arcu dignissimos exercitationem nascetur qui accusantium inceptos.</p>
+                                    <div class="write-message d-flex align-items-center mt-auto">
+                                        <div class="download-img">
+                                            <i class="fas fa-camera"></i>
+                                        </div>
+                                        <!-- /.download-img -->
+                                        <form class="d-flex align-items-center">
+                                            <input type="text" class="form-control" name="message" placeholder="Write your message">
+                                            <button class="send-message">
+                                                <i class="fas fa-arrow-right"></i>
+                                            </button>
+                                        </form>
                                     </div>
-                                    <!-- /.message -->
-                                    <img class="messanger-avatar mb-auto" src="img/messanger-avatar.png" alt="">
+                                    <!-- /.write-message -->
                                 </div>
-                                <div class="write-message d-flex align-items-center mt-auto">
-                                    <div class="download-img">
-                                        <i class="fas fa-camera"></i>
-                                    </div>
-                                    <!-- /.download-img -->
-                                    <form class="d-flex align-items-center">
-                                        <input type="text" class="form-control" name="message" placeholder="Write your message">
-                                        <button class="send-message">
-                                            <i class="fas fa-arrow-right"></i>
-                                        </button>
-                                    </form>
-                                </div>
-                                <!-- /.write-message -->
+                                <!-- /.scrollbar-inner -->
                             </div>
                             <!-- /.messages-wrapper -->
                             <div class="settings-wrapper" id="settings">
-                                <form name="setting-form" class="d-flex flex-wrap justify-content-between">
-                                    <div class="form-group small">
-                                        <label for="first-name">First Name</label>
-                                        <input type="text" id="first-name" name="first-name" class="form-control" placeholder="Druid">
-                                    </div>
-                                    <!-- /.form-group -->
-                                    <div class="form-group small">
-                                        <label for="last-name">Last Name</label>
-                                        <input type="text" id="last-name" name="last-name" class="form-control" placeholder="Wensleydale">
-                                    </div>
-                                    <!-- /.form-group -->
-                                    <div class="form-group small">
-                                        <label for="email">Email Address</label>
-                                        <input type="email" id="email" class="form-control" name="email" placeholder="wisteria@support.com">
-                                    </div>
-                                    <!-- /.form-group -->
-                                    <div class="form-group small">
-                                        <label for="password">Password</label>
-                                        <input type="password" id="password" class="form-control" name="password" placeholder="********">
-                                    </div>
-                                    <!-- /.form-group -->
-                                    <div class="form-group small">
-                                        <label for="phone">Phone No</label>
-                                        <input type="tel" id="phone" name="phone" class="form-control" placeholder="(+964) 431 745 542">
-                                    </div>
-                                    <!-- /.form-group -->
-                                    <div class="form-group small">
-                                        <label for="counrty">Select Country</label>
-                                        <select name="country" id="country" class="select-styler">
-                                            <option value="">London</option>
-                                            <option value="">Ukraine</option>
-                                            <option value="">Russia</option>
-                                        </select>
-                                    </div>
-                                    <!-- /.form-group -->
-                                    <div class="form-group">
-                                        <label for="website">Website</label>
-                                        <input type="url" name="website" id="website" class="form-control" placeholder="decentthemes.com">
-                                    </div>
-                                    <!-- /.form-group -->
-                                    <div class="form-group">
-                                        <label for="message">Message</label>
-                                        <textarea name="message" id="message" class="form-control" placeholder="Write your message"></textarea>
-                                    </div>
-                                    <!-- /.form-group -->
-                                    <button class="submit-btn ml-auto"><span>Update profile</span></button>
-                                </form>
+                                <div class="scrollbar-inner">
+                                    <form name="setting-form" class="d-flex flex-wrap justify-content-between">
+                                        <div class="form-group small">
+                                            <label for="first-name">First Name</label>
+                                            <input type="text" id="first-name" name="first-name" class="form-control" placeholder="Druid">
+                                        </div>
+                                        <!-- /.form-group -->
+                                        <div class="form-group small">
+                                            <label for="last-name">Last Name</label>
+                                            <input type="text" id="last-name" name="last-name" class="form-control" placeholder="Wensleydale">
+                                        </div>
+                                        <!-- /.form-group -->
+                                        <div class="form-group small">
+                                            <label for="email">Email Address</label>
+                                            <input type="email" id="email" class="form-control" name="email" placeholder="wisteria@support.com">
+                                        </div>
+                                        <!-- /.form-group -->
+                                        <div class="form-group small">
+                                            <label for="password">Password</label>
+                                            <input type="password" id="password" class="form-control" name="password" placeholder="********">
+                                        </div>
+                                        <!-- /.form-group -->
+                                        <div class="form-group small">
+                                            <label for="phone">Phone No</label>
+                                            <input type="tel" id="phone" name="phone" class="form-control" placeholder="(+964) 431 745 542">
+                                        </div>
+                                        <!-- /.form-group -->
+                                        <div class="form-group small">
+                                            <label for="counrty">Select Country</label>
+                                            <select name="country" id="country" class="select-styler">
+                                                <option value="">London</option>
+                                                <option value="">Ukraine</option>
+                                                <option value="">Russia</option>
+                                            </select>
+                                        </div>
+                                        <!-- /.form-group -->
+                                        <div class="form-group">
+                                            <label for="website">Website</label>
+                                            <input type="url" name="website" id="website" class="form-control" placeholder="decentthemes.com">
+                                        </div>
+                                        <!-- /.form-group -->
+                                        <div class="form-group">
+                                            <label for="message">Message</label>
+                                            <textarea name="message" id="message" class="form-control" placeholder="Write your message"></textarea>
+                                        </div>
+                                        <!-- /.form-group -->
+                                        <button class="submit-btn ml-auto"><span>Update profile</span></button>
+                                    </form>
+                                </div>
+                                <!-- /.scrollbar-inner -->
                             </div>
                             <!-- /#settings -->
                         </div>
@@ -582,7 +564,7 @@
                                 <!-- /.user-avatar -->
                                 <div class="profile-user-about d-flex flex-column align-items-center">
                                     <span class="user-name">Druid Wensleydale</span>
-                                    <span class="user-profeccion">Freelance Designer, Previously TapQ</span>
+                                    <span class="user-profession">Freelance Designer, Previously TapQ</span>
                                     <span class="user-address">London,United Kingdom</span>
                                 </div>
                                 <!-- /.profile-user-about -->
@@ -593,7 +575,7 @@
                                 <!-- /.profile-user-btn -->
                             </div>
                             <!-- /.profile-user-info -->
-                            <div class="profile-user-reviews d-flex justify-content-between align-items-baseline">
+                            <div class="profile-user-reviews d-flex flex-wrap justify-content-between align-items-baseline">
                                 <div class="rating">
                                     <ul>
                                         <li><i class="fas fa-star"></i></li>
@@ -734,6 +716,8 @@
 
     <!-- init -->
     <script src="js/main/init.js"></script>
+
+    <script src="js/main/aside.js"></script>
 
 </body>
 </html>

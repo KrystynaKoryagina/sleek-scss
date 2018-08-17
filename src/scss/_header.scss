@@ -7,6 +7,10 @@
     border: $headerBorder;
     box-shadow: 0 6px 20px rgba(0, 0, 0, .1);
 
+    @media(max-width: 1200px) {
+        padding-left: 0;
+    }
+
     &.header-login {
         padding-left: 39px;
 
@@ -53,6 +57,16 @@
 
     .header-content {
         padding: 19px 39px;
+
+        .menu-btn {
+            @extend %menu-btn;
+            display: none;
+    
+            @media(max-width: 1200px) {
+                display: block;
+                margin-right: 40px;
+            }
+        }
         
         form {
             label {

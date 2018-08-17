@@ -17,101 +17,120 @@
             color: #76797e;
         }
     }
-}
 
-.page-header-chart {
-    .chart-info {
-        margin-right: 20px;
-
-        span {
-            display: block;
+    .page-header-charts-wrap {
+        @media (max-width: 767px) {
+            width: 100%;
+            margin-left: 0;
         }
 
-        .chart-name {
-            font-size: .75rem;
-            line-height: 1.66em;
-            text-transform: uppercase;
-        }
+        .page-header-chart {
 
-        .total-chart-value {
-            font-family: 'ralewaymedium', sans-serif;
-            font-size: 1.125rem;
-            color: #1585ff;
-        }
-    }
-
-    .small-chart {
-        .column {
-            position: relative;
-            width: 4px;
-            background-color: $basicSmallChartBg;
-    
-            & + .column {
-                margin-left: 4px;
+            @media (max-width: 767px) {
+               margin-top: 30px;
             }
 
-            span {
-                @include position-x-center;
-                display: none;
-                top: -30px;
-                padding: 3px 6px;
-                font-family: 'ralewaymedium', sans-serif;
-                font-size: .8125rem;
-                color: #fff;
-                text-align: center;
-                border-radius: 2px;
-
-                &::before {
-                    @include position-x-center;   
-                    content: "";
-                    top: 100%;
-                    border: 3px solid transparent;
-                }
-            }
-
-            &:hover {
+            .chart-info {
+                margin-right: 20px;
+        
                 span {
                     display: block;
-                    z-index: 1;
+                }
+        
+                .chart-name {
+                    font-size: .75rem;
+                    line-height: 1.66em;
+                    text-transform: uppercase;
+                }
+        
+                .total-chart-value {
+                    font-family: 'ralewaymedium', sans-serif;
+                    font-size: 1.125rem;
+                    color: #1585ff;
                 }
             }
-        }
-
-        &.red-hover {
-            .column {
-                &:hover {
-                    background-color: $basicRed;
-
+        
+            .small-chart {
+                .column {
+                    position: relative;
+                    width: 4px;
+                    background-color: $basicSmallChartBg;
+            
+                    & + .column {
+                        margin-left: 4px;
+                    }
+        
                     span {
-                        background-color: $basicRed;
-
+                        @include position-x-center;
+                        display: none;
+                        top: -30px;
+                        padding: 3px 6px;
+                        font-family: 'ralewaymedium', sans-serif;
+                        font-size: .8125rem;
+                        color: #fff;
+                        text-align: center;
+                        border-radius: 2px;
+        
                         &::before {
-                            border-top-color: $basicRed;
+                            @include position-x-center;   
+                            content: "";
+                            top: 100%;
+                            border: 3px solid transparent;
+                        }
+                    }
+        
+                    &:hover {
+                        span {
+                            display: block;
+                            z-index: 1;
+                        }
+                    }
+                }
+        
+                &.red-hover {
+                    .column {
+                        &:hover {
+                            background-color: $basicRed;
+        
+                            span {
+                                background-color: $basicRed;
+        
+                                &::before {
+                                    border-top-color: $basicRed;
+                                }
+                            }
+                        }
+                    }
+                }
+        
+                &.blue-hover {
+                    .column {
+                        &:hover {
+                            background-color: $basicBlue;
+        
+                            span {
+                                background-color: $basicBlue;
+        
+                                &::before {
+                                    border-top-color: $basicBlue;
+                                }
+                            }
                         }
                     }
                 }
             }
-        }
+        
+            & + .page-header-chart {
+                margin-left: 78px;
 
-        &.blue-hover {
-            .column {
-                &:hover {
-                    background-color: $basicBlue;
-
-                    span {
-                        background-color: $basicBlue;
-
-                        &::before {
-                            border-top-color: $basicBlue;
-                        }
-                    }
+                @media (max-width: 767px) {
+                    margin-left: 0;
                 }
             }
         }
-    }
-
-    & + .page-header-chart {
-        margin-left: 78px;
     }
 }
+
+
+
 

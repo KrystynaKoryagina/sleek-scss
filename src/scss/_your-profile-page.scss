@@ -2,11 +2,13 @@
     padding: 50px 40px 80px;
     min-height: 600px;
 
+    @media (max-width: 576px) {
+        padding: 10px;
+    }
+
     .profile-controls {
         min-width: 1000px;
         width: 60%;
-        // max-height: 1050px;
-        // padding: 0 25px;
 
         @media (max-width: 1919px) {
             min-width: auto;
@@ -18,10 +20,8 @@
     .profile-info {
         min-width: 495px;
         width: 30%;
-        // padding: 0 25px;
 
         @media (max-width: 1919px) {
-            // max-width: auto;
             width: 100%;
             margin-bottom: 60px;
             display: flex;
@@ -29,20 +29,23 @@
             justify-content: space-between;
         }
 
+        @media (max-width: 576px) {
+            min-width: auto;
+        }
+
         .card {
 
             & + .card {
                 margin-top: 60px;
-
-                @media (max-width: 1919px) {
-                    margin-top: 0;
-                }
             }
 
             @media (max-width: 1919px) {
                 width: 48%;
             }
 
+            @media (max-width: 991px) {
+                width: 100%;
+            }
         }
 
         .profile-user-wrapper {
@@ -76,6 +79,12 @@
                         color: #1d2025;
                     }
 
+                    .user-profession {
+                        @media (max-width: 576px) {
+                            font-size: .8rem;
+                        }
+                    }
+
                     .user-address {
                         color: #999da5;
                     }
@@ -84,9 +93,7 @@
                 .profile-btn-wrapper {
 
                     @media (max-width: 1356px) {
-                        display: flex;
-                        flex-wrap: wrap;
-                        justify-content: center;    
+                        text-align: center;
                     }
 
                     .profile-btn {
@@ -122,6 +129,13 @@
                 padding-top: 20px;
                 padding-bottom: 20px;
                 border-bottom: $profileInfoBorder;
+
+                .rating {
+                    @media (max-width: 576px) {
+                        width: 1005px;
+                        margin-bottom: 20px;
+                    }
+                }
 
                 .user-reviews-title {
                     font-family: 'ralewaymedium', sans-serif;
@@ -172,12 +186,26 @@
                         margin-top: 35px;
                     }
 
+                    .icon {
+                        @media (max-width: 576px) {
+                            display: none;
+                        }
+                    }
+
                     .user-work-about {
                         margin-left: 20px;
+
+                        @media (max-width: 576px) {
+                            margin-left: 0;
+                        }
 
                         .user-post {
                             font-family: 'ralewaymedium', sans-serif;
                             color: #1d2025;
+
+                            @media (max-width: 576px) {
+                                margin-bottom: 5px;
+                            }
                         }
                     }
 
@@ -185,6 +213,11 @@
                         @media (max-width: 1356px) {
                             margin-left: 56px;
                             margin-top: 5px;
+                            width: 100%;
+                        }
+
+                        @media (max-width: 576px) {
+                            margin-left: 0;
                         }
                     }
                 }
@@ -281,7 +314,18 @@
         padding: 0 40px;
         border-bottom: 2px solid #eceff3;
 
+        @media (max-width: 576px) {
+            padding: 0;
+        }
+
         li {
+            
+            @media (max-width: 576px) {
+                width: 100%;
+                text-align: center;
+            }
+
+            
             a {
                 display: inline-block;
                 padding: 35px 20px 25px;
@@ -289,6 +333,11 @@
                 font-size: .875rem;
                 color: #999da5;
                 border-top: 3px solid #fff;
+
+                @media (max-width: 576px) {
+                    padding: 10px;
+                    width: 100%;
+                }  
             }
 
             &.ui-state-active {
@@ -304,15 +353,18 @@
     .ui-tabs-panel {
         max-height: 970px;
     }
+
+    .scroll-wrapper {
+        height: 912px;
+    }
    
     .activity-wrapper {
         padding: 30px 0 30px 40px;
 
-
-        .scroll-wrapper {
-            height: 912px;
+        @media (max-width: 576px) {
+            padding-left: 10px;
         }
-    
+
         .activity-day {
     
             & + .activity-day {
@@ -331,6 +383,9 @@
                 position: relative;
                 padding-bottom: 34px;
                 
+                @media (max-width: 991px) {
+                    margin-right: 25px;
+                }
                  
                 &::before {
                     content: "";
@@ -396,16 +451,14 @@
                     }
 
                     .loaded-img {
-                        margin-top: 15px;
+                        margin-top: 10px;
                         margin-bottom: 15px;
 
                         img {
                             width: 80px;
                             height: 80px;
-
-                            & + img {
-                                margin-left: 10px;
-                            }
+                            margin-top: 5px;
+                            margin-right: 8px;
                         }
                     }
 
@@ -422,14 +475,32 @@
     }
 
     .profile-wrapper {
-        padding: 40px 40px 60px;
+        padding: 40px 0 40px 60px;
+
+        @media (max-width: 576px) {
+            padding-left: 10px;
+        }
 
         .about-user {
+            margin-right: 40px;
 
+            @media (max-width: 992px) {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            @media (max-width: 576px) {
+                margin-right: 20px;
+            }
+            
             .user-photo {
                 img {
                     width: 360px;
                     height: 430px;
+                }
+
+                @media (max-width: 576px) {
+                    display: none;
                 }
             }
 
@@ -440,6 +511,14 @@
 
                 @media (max-width: 1919px) {
                     margin-left: 50px;
+                }
+
+                @media (max-width: 991px) {
+                    max-width: 100%;
+                }
+
+                @media (max-width: 576px) {
+                    margin-left: 0;
                 }
 
                 .user-info-item {
@@ -454,7 +533,6 @@
                     }
 
                     p {
-                        // margin-top: 18px;
                         color: #999da5;
                         line-height: 1.71em;
                     }
@@ -467,6 +545,12 @@
 
         .skills-wrapper {
             margin-top: 70px;
+            margin-right: 40px;
+
+            @media (max-width: 576px) {
+                margin-top: 30px;
+                margin-right: 25px;
+            }
 
             .skills-title {
                 margin-bottom: 10px;
@@ -508,19 +592,29 @@
     }
 
     .messages-wrapper {
-        padding: 44px 40px 50px;
+        padding: 44px 0 40px 50px;
+
+        @media (max-width: 576px) {
+            padding-left: 10px;
+        }
 
         .message-item {
+            margin-right: 40px;
 
             & + .message-item {
                 margin-top: 40px;
             }
 
 
-            .messander-avatar {
+            .messanger-avatar {
                 width: 60px;
                 height: 60px;
-                border-radius: 50%; 
+                border-radius: 50%;
+
+                @media (max-width: 767px) {
+                    display: none;
+                }
+                
             }
 
             .message {
@@ -549,6 +643,10 @@
 
                     @media(max-width: 1356px) {
                         line-height: 1.5em;
+                    }
+
+                    @media(max-width: 576px) {
+                        font-size: .8rem;
                     }
                 }
             }
@@ -613,6 +711,7 @@
 
         .write-message {
             margin-top: 53px;
+            margin-right: 40px;
             padding: 2px 2px 2px 30px;
             border: 1px solid #ededed;
             background-color: $basicGrey;
@@ -656,15 +755,25 @@
     }
 
     .settings-wrapper {
-        padding: 43px 40px 50px;
+        padding: 43px 0 40px 50px;
+
+        @media (max-width: 576px) {
+            padding-left: 10px;
+        }
 
         form {
+            margin-right: 40px;
+
             .form-group {
                 width: 100%;
                 margin-bottom: 30px;
 
                 &.small {
                     width: 49%;
+
+                    @media (max-width: 767px) {
+                        width: 100%;
+                    }
                 }
 
                 textarea.form-control {
