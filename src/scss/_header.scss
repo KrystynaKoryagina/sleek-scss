@@ -20,9 +20,8 @@
             padding: 10px;
         }
 
-        .menu-btn {
-            margin-left: 75px;
-            margin-right: 20px;
+        .logo {
+            padding-right: 40px;
         }
 
         .header-content {
@@ -58,6 +57,11 @@
     .header-content {
         padding: 19px 39px;
 
+        @media (max-width: 576px) {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
         .menu-btn {
             @extend %menu-btn;
             display: none;
@@ -66,9 +70,17 @@
                 display: block;
                 margin-right: 40px;
             }
+
+            @media(max-width: 576px) {
+                margin-right: 20px;
+            }
         }
         
         form {
+            @media (max-width: 767px) {
+                margin-left: auto;
+            }
+
             label {
                 font-family: $basicFontFamily;
                 font-size: .875rem;
@@ -78,6 +90,12 @@
         }
 
         .user-controls {
+            
+            @media (max-width: 767px) {
+                width: 100%;
+                margin-top: 30px;
+            }
+
             .dropdown-items-wrap {
                 padding: 5px 30px;
                 border-left: $headerBorder;

@@ -1386,7 +1386,12 @@ label {
   bottom: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.7);
-  z-index: 98; }
+  z-index: -1;
+  opacity: 0; }
+
+.show-aside .overlay {
+  z-index: 98;
+  opacity: 1; }
 
 body.show-aside {
   overflow-y: hidden; }
@@ -1419,9 +1424,8 @@ body.show-aside {
             -ms-flex-pack: justify;
                 justify-content: space-between;
         padding: 10px; } }
-    #header.header-login .menu-btn {
-      margin-left: 75px;
-      margin-right: 20px; }
+    #header.header-login .logo {
+      padding-right: 40px; }
     #header.header-login .header-content {
       width: 100%;
       border-left: 1px solid #e5e8ee; }
@@ -1451,17 +1455,31 @@ body.show-aside {
           margin-bottom: 30px; } }
   #header .header-content {
     padding: 19px 39px; }
+    @media (max-width: 576px) {
+      #header .header-content {
+        padding-left: 20px;
+        padding-right: 20px; } }
     #header .header-content .menu-btn {
       display: none; }
       @media (max-width: 1200px) {
         #header .header-content .menu-btn {
           display: block;
           margin-right: 40px; } }
+      @media (max-width: 576px) {
+        #header .header-content .menu-btn {
+          margin-right: 20px; } }
+    @media (max-width: 767px) {
+      #header .header-content form {
+        margin-left: auto; } }
     #header .header-content form label {
       font-family: "ralewayregular", sans-serif;
       font-size: .875rem;
       color: #9da0a4;
       margin-bottom: 0; }
+    @media (max-width: 767px) {
+      #header .header-content .user-controls {
+        width: 100%;
+        margin-top: 30px; } }
     #header .header-content .user-controls .dropdown-items-wrap {
       padding: 5px 30px;
       border-left: 1px solid #e5e8ee;
@@ -1854,18 +1872,22 @@ body.show-aside {
     @media (max-width: 576px) {
       .profile-container .profile-info {
         min-width: auto; } }
-    .profile-container .profile-info .card + .card {
-      margin-top: 60px; }
     @media (max-width: 1919px) {
       .profile-container .profile-info .card {
         width: 48%; } }
     @media (max-width: 991px) {
       .profile-container .profile-info .card {
-        width: 100%; } }
+        width: 100%; }
+        .profile-container .profile-info .card + .card {
+          margin-top: 60px; } }
     .profile-container .profile-info .profile-user-wrapper {
       padding-top: 40px;
       padding-left: 40px;
       padding-right: 40px; }
+      @media (max-width: 576px) {
+        .profile-container .profile-info .profile-user-wrapper {
+          padding-left: 20px;
+          padding-right: 20px; } }
       .profile-container .profile-info .profile-user-wrapper .profile-user-info {
         padding-bottom: 40px;
         border-bottom: 1px solid #ebebeb; }
@@ -1989,6 +2011,10 @@ body.show-aside {
       padding-top: 35px;
       padding-left: 40px;
       padding-right: 40px; }
+      @media (max-width: 576px) {
+        .profile-container .profile-info .profile-billing-wrapper {
+          padding-left: 20px;
+          padding-right: 20px; } }
       .profile-container .profile-info .profile-billing-wrapper .billing-plan-info {
         padding-bottom: 25px;
         border-bottom: 1px solid #ebebeb; }
@@ -2017,6 +2043,9 @@ body.show-aside {
         .profile-container .profile-info .profile-billing-wrapper .billing-package-info ul li {
           font-size: .875rem;
           color: #999da5; }
+          @media (max-width: 576px) {
+            .profile-container .profile-info .profile-billing-wrapper .billing-package-info ul li {
+              font-size: .7rem; } }
           .profile-container .profile-info .profile-billing-wrapper .billing-package-info ul li + li {
             margin-top: 20px; }
         .profile-container .profile-info .profile-billing-wrapper .billing-package-info .package li {
@@ -2178,6 +2207,9 @@ body.show-aside {
       .profile-tabs .profile-wrapper .about-user .user-info .user-info-item {
         min-width: 50%;
         margin-top: 10px; }
+        @media (max-width: 576px) {
+          .profile-tabs .profile-wrapper .about-user .user-info .user-info-item {
+            width: 100%; } }
         .profile-tabs .profile-wrapper .about-user .user-info .user-info-item .user-info-title {
           margin-bottom: 10px;
           font-family: 'ralewaymedium';

@@ -35,16 +35,16 @@
 
         .card {
 
-            & + .card {
-                margin-top: 60px;
-            }
-
             @media (max-width: 1919px) {
                 width: 48%;
             }
 
             @media (max-width: 991px) {
                 width: 100%;
+
+                & + .card {
+                    margin-top: 60px;
+                }
             }
         }
 
@@ -52,6 +52,11 @@
             padding-top: 40px; 
             padding-left: 40px;
             padding-right: 40px;
+
+            @media (max-width: 576px) {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
 
             .profile-user-info {
                 padding-bottom: 40px;
@@ -236,6 +241,11 @@
             padding-left: 40px;
             padding-right: 40px;
 
+            @media (max-width: 576px) {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
             .billing-plan-info {
                 padding-bottom: 25px;
                 border-bottom: $profileInfoBorder;
@@ -283,12 +293,14 @@
                         font-size: .875rem;
                         color: #999da5;
 
+                        @media (max-width: 576px) {
+                            font-size: .7rem;
+                        }
+
                         & + li {
                             margin-top: 20px;
                         }
-                        
                     }
-
                 }
 
                 .package {
@@ -524,6 +536,10 @@
                 .user-info-item {
                     min-width: 50%;
                     margin-top: 10px;
+
+                    @media (max-width: 576px) {
+                        width: 100%;
+                    }
                   
                     .user-info-title {
                         margin-bottom: 10px;
@@ -784,6 +800,5 @@
             }
         }
     }
-
 }
 

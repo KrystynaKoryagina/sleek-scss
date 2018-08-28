@@ -3,7 +3,6 @@
     background-color: #f2f4f7;
 }
 
-
 #aside {
     @include fixed-to-top();
     max-width: $asideWidth;
@@ -73,8 +72,6 @@
         }
     
     }
-
-    
 }
 
 .show-aside #aside {
